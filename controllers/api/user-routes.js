@@ -56,7 +56,7 @@ app.get('/dashboard', (req, res) => {
   } else {
     res.redirect('/login');
   }
- 
+  res.render('pages/dashboard')
 });
 
 
