@@ -49,4 +49,16 @@ app.get('/logout', (req, res) => {
   });
 });
 
+app.get('/dashboard', (req, res) => {
+  if (req.session.loggedIn) {
+    res.send('Welcome to the dashboard!');
+  } else {
+    res.redirect('/login');
+  }
+});
+
+
+
+
+
 
