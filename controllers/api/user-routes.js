@@ -24,4 +24,19 @@ app.post('/signup', async (req, res) => {
   res.render
 });
 
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  
+  const user = req.session.user;
+
+  if (user && await bcrypt.compare(password, user.password)) {
+    req.session.loggedIn = true; 
+    res.redirect('/dashboard'); 
+  } else {
+    res.send('Invalid username or password');
+  }
+});
+
+
 
