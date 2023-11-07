@@ -22,7 +22,6 @@ app.post('/signup', async (req, res) => {
   
   res.redirect('/dashboard');
   res.render('pages/signup')
-  
 });
 
 app.post('/login', async (req, res) => {
@@ -37,7 +36,7 @@ app.post('/login', async (req, res) => {
   } else {
     res.send('Invalid username or password');
   }
-  
+  res.render('pages/login')
 });
 
 
@@ -57,8 +56,7 @@ app.get('/dashboard', (req, res) => {
   } else {
     res.redirect('/login');
   }
-  res.render('pages/login')
-  
+ 
 });
 
 
