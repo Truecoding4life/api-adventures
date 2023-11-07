@@ -1,0 +1,11 @@
+{{#if loggedIn}}
+<section class="post">
+  <header>{{title}}</header>
+  <div class="post-content">
+    {{content}}
+  </div>
+  <p>By: {{author}}</p>
+</section>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}
