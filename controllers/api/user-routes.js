@@ -12,3 +12,16 @@ app.use(session({
   saveUninitialized: true
 }));
 
+// Routes:
+app.post('/signup', async (req, res) => {
+  const { username, password } = req.body;
+
+  const hashedPassword = await bcrypt.hash(password, 10);
+
+  req.session.user = { username, password: hashedPassword };
+  
+  res.redirect('/dashboard');
+  res.render
+});
+
+
