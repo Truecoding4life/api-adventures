@@ -1,7 +1,8 @@
 const express = require('express');
-const session = require('express-session');
-const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt');
+const { User } = require('../../models');
+// const session = require('express-session');
+// const bodyParser = require('body-parser');
+// const bcrypt = require('bcrypt');
 
 const app = express();
 
@@ -21,7 +22,6 @@ app.post('/signup', async (req, res) => {
   req.session.user = { username, password: hashedPassword };
   
   res.redirect('/dashboard');
-  res.render('pages/signup')
 });
 
 app.post('/login', async (req, res) => {
@@ -36,7 +36,8 @@ app.post('/login', async (req, res) => {
   } else {
     res.send('Invalid username or password');
   }
-  res.render('pages/login')
+  res.render('login')
+  
 });
 
 
@@ -56,7 +57,7 @@ app.get('/dashboard', (req, res) => {
   } else {
     res.redirect('/login');
   }
-  res.render('pages/dashboard')
+  res.render('dashboard')
 });
 
 
