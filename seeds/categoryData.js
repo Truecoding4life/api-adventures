@@ -28,6 +28,6 @@ const categoryData = [
 
 ];
 
-const seedResource = () => Category.bulkCreate(categoryData);
+const seedCategory = () => Category.bulkCreate(categoryData);
 
-module.exports = seedResource;
+module.exports = seedCategory;
