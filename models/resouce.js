@@ -43,8 +43,8 @@ Resource.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'post',
+    modelName: 'resource',
   }
 );
 
-module.exports = Post;
+module.exports = Resource;
