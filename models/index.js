@@ -2,8 +2,6 @@ const User = require('./user');
 const Resource = require('./resouce');
 const Project = require('./project');
 
-// What else do we need?
-// Add user has many ?
 User.hasMany(Resource, {
   foreignKey: 'user_id',
 });
