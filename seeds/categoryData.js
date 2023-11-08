@@ -8,7 +8,7 @@ const categoryData = [
         category_name: "foods",
     },
     {
-        category_name: "musics",
+        category_name: "music",
     },
     {
         category_name: "weather",
@@ -18,6 +18,12 @@ const categoryData = [
     },    
     {
         category_name: "gaming",
+    },    
+    {
+        category_name: "technology",
+    },    
+    {
+        category_name: "shopping",
     },
 
 ];
