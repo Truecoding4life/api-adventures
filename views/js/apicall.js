@@ -25,3 +25,35 @@ function renderPicture() {
         rawData = JSON.parse(NoSave);
     }
 }
+
+function savePicture() {
+    localStorage.setItem("dataArray", JSON.stringify(dataArray));
+    localStorage.setItem("rawData", JSON.stringify(rawData));
+}
+
+function getPicture() {
+    fetch(url)
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("Network response was not OK");
+            }
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+            const img = document.createElement("img");
+            img.setAttribute("src", data.urls.regular);
+            img.setAttribute("alt", data.alt_description);
+            img.setAttribute("id", "img");
+            img.setAttribute("width", "300px");
+            img.setAttribute("height", "300px");
+            const selectpic = document.getElementById("selectpic");
+            selectpic.innerHTML = ''; // Clear previous images
+            selectpic.appendChild(img);
+            rawData.push(data);
+            savePicture();
+        })
+        .catch(function (error) {
+            console.error('Error:', error);
+        });
+};
