@@ -1,5 +1,5 @@
-DROP DATABASE IF EXISTS blog_db;
+DROP DATABASE IF EXISTS Adventures_db;
 
-CREATE DATABASE blog_db;
+CREATE DATABASE Adventures_db;
 
-USE blog_db;
+USE Adventures_db;
