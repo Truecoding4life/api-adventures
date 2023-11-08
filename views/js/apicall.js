@@ -1,12 +1,27 @@
 require('dotenv').config();
 const { User } = require('../../models');
 
-api_Key = process.env.API_KEY
-// api_Secret = process.env.API_SECRET
+const api_Key = process.env.API_KEY
+// const api_Secret = process.env.API_SECRET
 
-url = `https://api.unsplash.com/photos/random?query=${User.category}&orientation=squarish&client_id=${api_Key}`
+const url = `https://api.unsplash.com/photos/random?query=${User.category}&orientation=squarish&client_id=${api_Key}`
 
-// url = `https://api.unsplash.com/photos/random?query=map&orientation=squarish&client_id=jJoD--t-YwtUk6AG6cgPNH_tl8JWeW-c6MEmMUCfm_8`
+const dataArray = [];
+const rawData = [];
+const selectpic = $("#selectpic");
 
 
-   
+function renderPicture() {
+    const rawHistoryArray = localStorage.getItem("dataArray");
+    const NoSave = localStorage.getItem("rawData");
+    if (rawHistoryArray === null) {
+        dataArray = [];
+    }else{
+        dataArray = JSON.parse(rawHistoryArray);
+    }
+    if (NoSave === null) {
+        rawData = [];
+    }else{
+        rawData = JSON.parse(NoSave);
+    }
+}
