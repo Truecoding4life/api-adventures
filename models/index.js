@@ -1,5 +1,5 @@
-const User = require('./User');
-const Post = require('./Post');
+const User = require('./user');
+const Post = require('./resouce');
 const Comment = require('./Comment');
 // What else do we need?
 // Add user has many ?
