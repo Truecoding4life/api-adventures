@@ -26,6 +26,12 @@ router.post('/login', async(req,res) => {
         email: req.body.email,
       },
     });
+    if (!dbUserDate) {
+      res
+      .status(400)
+      .json({ message: 'Incorrect email or password. Please try again!' });
+      return;
+    }
   }
 })
 
