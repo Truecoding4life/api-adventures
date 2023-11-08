@@ -19,65 +19,75 @@ router.post('/', async (req, res) => {
   }
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(session({
-  secret: 'secretly_key',
-  resave: false,
-  saveUninitialized: true
-}));
-
-// Routes:
-app.post('/signup', async (req, res) => {
-  const { username, password } = req.body;
-
-  const hashedPassword = await bcrypt.hash(password, 10);
-
-  req.session.user = { username, password: hashedPassword };
-
-  res.redirect('/dashboard');
-});
-
-app.post('/login', async (req, res) => {
-  const { username, password } = req.body;
-
-
-  const user = req.session.user;
-
-  if (user && await bcrypt.compare(password, user.password)) {
-    req.session.loggedIn = true;
-    res.redirect('/dashboard');
-  } else {
-    res.send('Invalid username or password');
+router.post('/login', async(req,res) => {
+  try{ 
+    const dbUserData = await User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    });
   }
-  res.render('login')
+})
 
-});
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(session({
+//   secret: 'secretly_key',
+//   resave: false,
+//   saveUninitialized: true
+// }));
 
+// // Routes:
+// app.post('/signup', async (req, res) => {
+//   const { username, password } = req.body;
 
+//   const hashedPassword = await bcrypt.hash(password, 10);
 
-app.get('/logout', (req, res) => {
-  req.session.destroy((err) => {
-    if (err) {
-      return console.log(err);
-    }
-    res.redirect('/login');
-  });
-});
+//   req.session.user = { username, password: hashedPassword };
 
-app.get('/dashboard', (req, res) => {
-  if (req.session.loggedIn) {
-    res.send('Welcome to the dashboard!');
-  } else {
-    res.redirect('/login');
-  }
-  res.render('dashboard')
-});
+//   res.redirect('/dashboard');
+// });
 
+// app.post('/login', async (req, res) => {
+//   const { username, password } = req.body;
 
 
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+//   const user = req.session.user;
+
+//   if (user && await bcrypt.compare(password, user.password)) {
+//     req.session.loggedIn = true;
+//     res.redirect('/dashboard');
+//   } else {
+//     res.send('Invalid username or password');
+//   }
+//   res.render('login')
+
+// });
+
+
+
+// app.get('/logout', (req, res) => {
+//   req.session.destroy((err) => {
+//     if (err) {
+//       return console.log(err);
+//     }
+//     res.redirect('/login');
+//   });
+// });
+
+// app.get('/dashboard', (req, res) => {
+//   if (req.session.loggedIn) {
+//     res.send('Welcome to the dashboard!');
+//   } else {
+//     res.redirect('/login');
+//   }
+//   res.render('dashboard')
+// });
+
+
+
+// const PORT = 3000;
+// app.listen(PORT, () => {
+//   console.log(`Server is running on http://localhost:${PORT}`);
+// });
 
 
