@@ -1,16 +1,28 @@
 const User = require('./user');
-const Post = require('./resouce');
+const Resource = require('./resouce');
+const Project = require('./project');
 
-const Comment = require('./project');
-
-// What else do we need?
-// Add user has many ?
-Post.hasMany(Comment, {
-  foreignKey: 'post_id',
+User.hasMany(Resource, {
+  foreignKey: 'user_id',
+});
+Resource.belongsTo(User, {
+  foreignKey: 'user_id',
 });
 
-Comment.belongsTo(Post, {
-  foreignKey: 'post_id',
+Resource.hasMany(Project, {
+  foreignKey: 'user_id', 
+  through: 'resource_project'
+});
+Project.hasMany(Resource, {
+  foreignKey: 'user_id',
+  through: 'resource_project'
 });
 
-module.exports = { User, Post, Comment };
+User.hasOne(Project, {
+  foreignKey: 'user_id',
+});
+Project.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+module.exports = { User, Project, Resource };
