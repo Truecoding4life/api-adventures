@@ -8,7 +8,6 @@ const url = `https://api.unsplash.com/photos/random?query=${User.category}&orien
 
 const dataArray = [];
 const rawData = [];
-const selectpic = $("#selectpic");
 
 
 function renderPicture() {
@@ -26,12 +25,22 @@ function renderPicture() {
     }
 }
 
-function savePicture() {
-    localStorage.setItem("dataArray", JSON.stringify(dataArray));
-    localStorage.setItem("rawData", JSON.stringify(rawData));
+function handleGetPick() {
+    console.log("clicked - Saving Data to local storage");
+
+    const selectpic = document.getElementById("#selectpic").val();
+
+    localStorage.setItem("selectpic", selectpic);
+    fetchPicture();
+    //reseting the value of the form for next use
+    selectpic = document.getElementById("#selectpic").val("");
+
+    console.log("Pic Saved");
 }
 
-function getPicture() {
+
+function fetchPicture() {
+    console.log(url);
     fetch(url)
         .then(function (response) {
             if (!response.ok) {
@@ -57,3 +66,13 @@ function getPicture() {
             console.error('Error:', error);
         });
 };
+
+function savePicture() {
+    localStorage.setItem("dataArray", JSON.stringify(dataArray));
+    localStorage.setItem("rawData", JSON.stringify(rawData));
+}
+
+
+document.querySelector('#selectpic').addEventListener('click', selectpic);
+
+module.exports = { handleGetPick, renderPicture };
