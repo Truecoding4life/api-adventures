@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+
 class Resource extends Model {}
 
 Resource.init(
@@ -37,6 +38,7 @@ Resource.init(
         key: 'id',
       },
     },
+
     
   },
   {
@@ -48,3 +50,4 @@ Resource.init(
 );
 
 module.exports = Resource;
+

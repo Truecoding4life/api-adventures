@@ -1,6 +1,8 @@
 const User = require('./user');
 const Post = require('./resouce');
+
 const Comment = require('./project');
+
 // What else do we need?
 // Add user has many ?
 Post.hasMany(Comment, {
