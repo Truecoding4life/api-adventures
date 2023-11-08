@@ -10,7 +10,34 @@ class User extends Model {
 
 User.init(
   {
-    // define columns
+    id: {
+      type: DataTypes.INTEGER,
+      unique: true,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    username: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: false,
+      validate: {
+        len: [4]
+      }
+    },
+    email: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: false,
+      isEmail: true
+    },
+    password: {
+      type: DataTypes.STRING,
+      unique: true,
+      allowNull: false,
+      validate: {
+        len: [8]
+      }
+    }
   },
   {
     hooks: {
