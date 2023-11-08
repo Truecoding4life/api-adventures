@@ -1,12 +1,8 @@
-const express = require('express');
-const exphbs = require('express-handlebars');
 const path = require('path');
+const express = require('express');
 const session = require('express-session');
-const bodyParser = require('body-parser');
-const bcrypt = require('bcrypt');
-const sequelize = require('./config/connection');
-
-// ... (other imports)
+const exphbs = require('express-handlebars');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const routes = require('./controllers');
 const app = express();
