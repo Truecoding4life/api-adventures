@@ -5,7 +5,7 @@ class Comment extends Model {}
 
 Comment.init(
   {
-  // define columns ?
+  
   },
   {
     sequelize,
