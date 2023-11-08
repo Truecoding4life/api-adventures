@@ -58,6 +58,17 @@ router.post('/login', async(req,res) => {
   }
 });
 
+router.post('/logout', (req, res) => {
+  if (req.session.loggedIn) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
+module.exports = router;
+
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(session({
 //   secret: 'secretly_key',
