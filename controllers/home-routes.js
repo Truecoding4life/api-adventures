@@ -5,12 +5,12 @@ const { Post, Comment } = require('../models');
 router.get('/', async (req, res) => {
   try {
     const dbPostData = await Post.findAll({
-      include: [
-        {
-          model: Comment,
-          attributes: ['content', 'author'],
-        }, 
-      ],
+      // include: [
+      //   {
+      //     model: Comment,
+      //     attributes: ['content', 'author'],
+      //   }, 
+      // ],
     });
 
     const posts = dbPostData.map((post) => post.get({ plain: true }));
@@ -23,24 +23,19 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
-
-
-
-
-
-
 
 router.get('/dashboard', async (req, res) => {
   try {
     const dbPostData = await Post.findAll({
-      include: [
-        {
-          model: Comment,
-          attributes: ['content', 'author'],
-        }, 
-      ],
+      where: {
+        user_id: req.session.user_id
+      },
+      // include: [
+      //   {
+      //     model: Comment,
+      //     attributes: ['content', 'author'],
+      //   }, 
+      // ],
     });
 
     const posts = dbPostData.map((post) => post.get({ plain: true }));
@@ -53,15 +48,6 @@ router.get('/dashboard', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
-
-
-
-
-
-
-
 
 // GET one blog post
 router.get('/post/:id', async (req, res) => {
