@@ -3,21 +3,21 @@ const { Resource, Category, User } = require('../../models');
 
 
 // sign up route
-router.post('/login', async (req, res) => {
-  try {
-    const dbUserData = await User.create(req.body);
-    req.session.save(() => {
-      req.session.user_id = dbUserData.id;
-      req.session.loggedIn = true;
-      res.status(200).json(dbUserData);
-    });
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
+// router.post('/login', async (req, res) => {
+//   try {
+//     const dbUserData = await User.create(req.body);
+//     req.session.save(() => {
+//       req.session.user_id = dbUserData.id;
+//       req.session.loggedIn = true;
+//       res.status(200).json(dbUserData);
+//     });
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
 
 // CREATE new user
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,

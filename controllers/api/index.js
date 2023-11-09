@@ -1,7 +1,7 @@
-
+const router = require('express').Router();
 const backEndRoutes = require('./Backend-routes');
 
-router.use('/posts', backEndRoutes);
+router.use('/', backEndRoutes);
 
  
 
