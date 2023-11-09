@@ -6,8 +6,6 @@ const api_Key = process.env.API_KEY
 
 const url = `https://api.unsplash.com/photos/random?query=${User.category}&orientation=squarish&client_id=${api_Key}`
 
-https://api.unsplash.com/photos/random?query=movies&orientation=squarish&client_id=jJoD--t-YwtUk6AG6cgPNH_tl8JWeW-c6MEmMUCfm_8
-
 const dataArray = [];
 const rawData = [];
 
