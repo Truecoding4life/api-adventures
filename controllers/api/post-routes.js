@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Post, Comment } = require('../../models');
+const { Post, Comment, User } = require('../../models');
 
 // The `/api/posts` endpoint
 
 router.get('/', async (req, res) => {
   try {
     const posts = await Post.findAll({
-      include: [{ model: Comment }],
+      include: [{ model: Comment, include: [{ model: User }]}]
     });
     res.json(posts);
   } catch (error) {
@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const post = await Post.findByPk(req.params.id, {
-      include: [{ model: Comment }],
+      include: [{ model: Comment, include: [{ model: User }]}]
     });
     if (!post) {
       res.status(404).json({ message: 'Post not found' });
@@ -31,7 +31,6 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    // const newPost = await Post.create(req.body);
     const newPost = await Post.create({...req.body, user_id: req.session.user_id});
     res.status(201).json(newPost);
   } catch (err) {
@@ -39,9 +38,9 @@ router.post('/', async (req, res) => {
     res.status(400).json({ message: 'Unable to create post' });
   }
 });
-  
 
 router.post('/post', (req, res) => {
+  console.log(newPost)
   const newPost = new Post({
       title: req.body.title,
       body: req.body.body
