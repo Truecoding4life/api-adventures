@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, Comment } = require('../../models');
+const { Post, Comment, User } = require('../../models');
 
 // The `/api/posts` endpoint
 
@@ -31,15 +31,12 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    // const newPost = await Post.create(req.body);
-    const newPost = await Post.create({...req.body, user_id: req.session.user_id});
+    const newPost = await Post.create(req.body);
     res.status(201).json(newPost);
   } catch (err) {
-    console.log(err)
     res.status(400).json({ message: 'Unable to create post' });
   }
 });
-  
 
 router.post('/post', (req, res) => {
   const newPost = new Post({
