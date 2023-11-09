@@ -7,7 +7,14 @@ const projectData = [
         deployed_url:"https://calendar-app.com",
         repo_url:"",
         user_id:"1"
-    }
+    },
+    {
+        title:"Calendar1 App1",
+        description:"A simple calendar app",
+        deployed_url:"https://calendar-app.com",
+        repo_url:"",
+        user_id:"2"
+    },
 ];
 
 const seedProject = () => Project.create(projectData);

@@ -10,7 +10,7 @@ Resource.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     title: {
       type: DataTypes.STRING,
@@ -20,7 +20,7 @@ Resource.init(
       type: DataTypes.TEXT,
       allowNull:false,
     },
-    image: {
+    image_url: {
       type: DataTypes.STRING,
       allowNull:false,
     },

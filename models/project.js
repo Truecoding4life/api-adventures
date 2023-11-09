@@ -11,11 +11,13 @@ Project.init(
     primaryKey: true,
     autoIncrement: true
   },
-  project_name: {
+  title: {
     type: DataTypes.STRING,
     allowNull:false,
   },
-  project_description: {
+
+  description: {
+
     type: DataTypes.TEXT,
     allowNull:false,
   },

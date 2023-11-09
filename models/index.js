@@ -25,11 +25,13 @@ Category.belongsTo(Resource, {
 // Relationship between Resource and Project
 Resource.belongsToMany(Project, {
   foreignKey: 'project_id',
-  through: 'resource_project'
+  through: 'resource_project',
+  as: 'projects'
 });
 Project.belongsToMany(Resource, {
   foreignKey: 'resource_id',
-  through: 'resource_project'
+  through: 'resource_project',
+  as: 'resources'
 });
 
 User.hasOne(Project, {
