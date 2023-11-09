@@ -134,7 +134,7 @@
 
  Thai Nghiem
 
- - [Portfolio](https://truecoding4life.github.io/Jaystudio/)
+ - [Portfolio](#)
  - [LinkedIn](https://www.linkedin.com/in/thai-nghiem-319292267/)
  - [GitHub](https://github.com/Truecoding4life)
 

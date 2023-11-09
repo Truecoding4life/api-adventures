@@ -34,7 +34,7 @@ const resourceData = [
         user_id: "1",
         category_id:"6"
     },
-    ,
+    
     {
         title: "Integrate the most reliable real-time calendar sync API",
         description: `The Cronofy calendar API is the choice of SaaS applications who care about reliability and performance at scale. Connect with Google, Microsoft and Apple calendars, even on-premise Exchange, with a 99.99% service guarantee.`,

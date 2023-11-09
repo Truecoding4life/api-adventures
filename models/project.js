@@ -16,7 +16,7 @@ Project.init(
     allowNull:false,
   },
   project_description: {
-    type: DataTypes.TEXT(1000),
+    type: DataTypes.TEXT,
     allowNull:false,
   },
   deployed_url:{
