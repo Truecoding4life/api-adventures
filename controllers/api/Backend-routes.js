@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Resource, Category, User } = require('../../models');
+const { Resource, Category, User, Project } = require('../../models');
 
 
 // sign up route
