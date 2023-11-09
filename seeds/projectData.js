@@ -2,32 +2,14 @@ const { Project } = require('../models');
 
 const projectData = [
     {
-        category_name: "sports",
-    },
-    {
-        category_name: "foods",
-    },
-    {
-        category_name: "music",
-    },
-    {
-        category_name: "weather",
-    },
-    {
-        category_name: "events",
-    },    
-    {
-        category_name: "gaming",
-    },    
-    {
-        category_name: "technology",
-    },    
-    {
-        category_name: "shopping",
-    },
-
+        title:"Calendar App",
+        description:"A simple calendar app",
+        deployed_url:"https://calendar-app.com",
+        repo_url:"",
+        user_id:"1"
+    }
 ];
 
-const seedProject = () => Category.bulkCreate(projectData);
+const seedProject = () => Project.bulkCreate(projectData);
 
 module.exports = seedProject;

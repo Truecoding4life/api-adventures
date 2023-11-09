@@ -3,6 +3,8 @@ const Resource = require('./resouce');
 const Project = require('./project');
 const Category = require('./category');
 
+
+// Relationship between User and Resource
 User.hasMany(Resource, {
   foreignKey: 'user_id',
 });
@@ -10,6 +12,8 @@ Resource.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
+
+// Relationship between Resource and Category
 Resource.hasOne(Category, {
   foreignKey: 'category_id',
 });
@@ -18,12 +22,13 @@ Category.belongsTo(Resource, {
   foreignKey: 'category_id',
 });
 
-Resource.hasMany(Project, {
-  foreignKey: 'user_id', 
+// Relationship between Resource and Project
+Resource.belongsToMany(Project, {
+  foreignKey: 'project_id',
   through: 'resource_project'
 });
-Project.hasMany(Resource, {
-  foreignKey: 'user_id',
+Project.belongsToMany(Resource, {
+  foreignKey: 'resource_id',
   through: 'resource_project'
 });
 
