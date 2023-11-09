@@ -15,7 +15,27 @@ async function loginHandler(event) {
     if(email && password) {
         const respond = await fetch('/api/login', {
             methods: 'POST',
-            body: JSON. 
+            body: JSON.stringify({email, password}), 
+            headers: {'Content-Type': 'application/json'},
         })
+        if(respond.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert('Failed to log in');
+        }   
+    }    
+};
+async function signUpHandler(event) {
+    if(email && password) {
+        const respond = await fetch('/api/signup', {
+            methods: 'POST',
+            body: JSON.stringify({emailSignup, firstName, lastName, passwordSignup}), 
+            headers: {'Content-Type': 'application/json'},
+        })
+        if(respond.ok) {
+            document.location.replace('/dashboard');
+        } else {
+            alert('Please enter a valid email and password');
+        }   
     }
 }
