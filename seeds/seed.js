@@ -1,6 +1,6 @@
 
 const sequelize = require('../config/connection');
-const seedProject = require('./userData');
+const seedProject = require('./projectData');
 const seedResource = require('./resourceData');
 const seedUser = require('./userData');
 const seedCategory = require('./categoryData');

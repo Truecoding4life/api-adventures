@@ -1,4 +1,6 @@
-DROP DATABASE IF EXISTS Adventures_db;
+DROP DATABASE IF EXISTS adventures_db;
 
-CREATE DATABASE Adventures_db;
+CREATE DATABASE adventures_db;
+
+USE adventures_db;
 
