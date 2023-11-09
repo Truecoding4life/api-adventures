@@ -1,12 +1,11 @@
 const router = require("express").Router();
-const { where } = require("sequelize");
-const { Resource, User, Project, Post } = require('../models');
-const { route } = require("./api");
+const { Resource, User, Project } = require('../models');
+
 // home route
 router.get("/", async (req, res) => {
   try {
     if(req.session.loggedIn) {
-       const dbPostData = await Post.findAll({
+       const dbPostData = await Resource.findAll({
       include: [{ model: Comment, include: [{ model: User }]}]
     });
     res.json(posts);
@@ -29,7 +28,7 @@ router.get("/", async (req, res) => {
 router.get("/dashboard", async (req, res) => {
   try {
     if(req.session.loggedIn){
-     const dbPostData = await Post.findByPk({
+     const dbPostData = await Resource.findByPk({
       where: {
         user_id: req.session.user_id
       },});
@@ -61,7 +60,15 @@ router.get('/project/:id', async (req, res) => {
   }
 });
 
-
+// Project route
+route.get('/project', async(req,res)=>{
+  try{
+    res.render('project', { project, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+})
 
 // login route
 router.get("/login", async (req, res) => {
