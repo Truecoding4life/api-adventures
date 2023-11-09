@@ -134,9 +134,9 @@
 
  Thai Nghiem
 
- - [Portfolio](#)
- - [LinkedIn](#)
- - [GitHub](#)
+ - [Portfolio](https://truecoding4life.github.io/Jaystudio/)
+ - [LinkedIn](https://www.linkedin.com/in/thai-nghiem-319292267/)
+ - [GitHub](https://github.com/Truecoding4life)
 
  Andy Zurek
 

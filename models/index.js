@@ -1,5 +1,5 @@
 const User = require('./user');
-const Resource = require('./resouce');
+const Resource = require('./resource');
 const Project = require('./project');
 const Category = require('./category');
 
