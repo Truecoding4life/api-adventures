@@ -61,9 +61,9 @@ router.get('/project/:id', async (req, res) => {
 });
 
 // Project route
-route.get('/project', async(req,res)=>{
+router.get('/project', async(req,res)=>{
   try{
-    res.render('project', { project, loggedIn: req.session.loggedIn });
+    res.render('project', { Project, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
