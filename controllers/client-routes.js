@@ -47,12 +47,22 @@ router.get("/dashboard", async (req, res) => {
 });
 
 // Project route
+
+//find one project by id: 
 router.get('/project/:id', async (req, res) => {
   try {
-    const dbProjectData = await Project.findByPk( 
-      { where: { user_id: req.params.session.user_id }});
-    const project = dbProjectData.get({ plain: true });
-    res.render('project', { project, loggedIn: req.session.loggedIn });
+    const dbprojectData = await Project.findByPk(req.params.id, {
+      include: [
+        {
+          model: Project,
+          attributes: ['title', 'user_id'],
+          include: [{ model: Project, include: [{ model: User }]}]
+        },
+      ],
+    });
+
+    // const project = dbprojectData.get({ plain: true });
+    // res.render('project', { project, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
