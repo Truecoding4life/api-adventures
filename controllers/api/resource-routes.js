@@ -1,22 +1,16 @@
 const router = require('express').Router();
 const { Resource, Category, User, Project} = require('../../models');
 
-router.get('/', async (req, res) => {
+router.post('/resource', async (req, res) => {
     try {
-      const dbResourceData = await Resource.findAll({
-        // include: [
-        //   {
-        //     model: project,
-        //     attributes: ['content', 'author'],
-        //   },
-        // ],
-      });
-  
-      const resources = dbResourceData.map((resource) => resource.get({ plain: true }));
-      res.render('homepage', {
-        resources,
-        loggedIn: req.session.loggedIn,
-      });
+      const newResource = await Resource.create({ 
+        title: req.body.title,
+        description: req.body.description,
+        image_url: req.body.image_url,
+        user_id: req.session.user_id,
+        category_id: req.body.category_id
+        });
+      res.status(201).json( "You created a new resource!");
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -24,20 +18,14 @@ router.get('/', async (req, res) => {
   });
 
 
-
-  router.get('/resource/:id', async (req, res) => {
+  // Route to make a comment for a single resource
+  // We might need this route later
+  router.post('/resource/:id', async (req, res) => {
     try {
-      const dbresourceData = await resource.findByPk(req.params.id, {
-        include: [
-          {
-            model: Project,
-            attributes: ['title', 'user_id'],
-            include: [{ model: Project, include: [{ model: User }]}]
-          },
-        ],
-      });
+      const dbResourceData = await resource.findByPk(
+        { where: { id: req.params.resource_id }});
   
-      const resource = dbresourceData.get({ plain: true });
+      const resource = dbResourceData.get({ plain: true });
       res.render('resource', { resource, loggedIn: req.session.loggedIn });
     } catch (err) {
       console.log(err);
@@ -69,22 +57,10 @@ router.get('/', async (req, res) => {
     //     }
     //   });
       
-      router.post('/resource', (req, res) => {
-        const newResource = new Resource({
-            title: req.body.title,
-            description: req.body.description, image_url: req.body.image_url, user_id: req.session.user_id, category_id: req.body.category_id
-        });
+
         
       
-        newResource.save((err) => {
-            if (err) {
-                console.error(err);
-                res.status(500).send('Error creating Resource');
-            } else {
-                res.redirect('/dashboard');
-            }
-        });
-      });
+
       
       router.put('/:id', async (req, res) => {
         try {
