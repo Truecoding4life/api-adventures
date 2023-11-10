@@ -59,6 +59,7 @@ router.put("/:id", (req, res) => {
     });
 });
 
+// resource delete route, tested and working
 router.delete("/:id", async (req, res) => {
   try {
     const deletedRows = await Resource.destroy({

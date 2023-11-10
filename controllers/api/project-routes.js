@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
   });
 
 
-
+// find one project by id: 
   router.get('/project/:id', async (req, res) => {
     try {
       const dbprojectData = await project.findByPk(req.params.id, {
@@ -69,22 +69,30 @@ router.get('/', async (req, res) => {
     //     }
     //   });
       
-      router.post('/project', (req, res) => {
-        const newProject = new Project({
+
+      router.post('/', async (req, res) => {
+        try {
+        const newProject = await Project.create({
             title: req.body.title,
-            description: req.body.description, image_url: req.body.image_url, user_id: req.session.user_id, category_id: req.body.category_id
+            description: req.body.description, 
+            deployed_url: req.body.deployed_url, 
+            repo_url: req.session.repo_url, 
+            user_id: req.body.user_id
         });
-        
-      
-        newProject.save((err) => {
-            if (err) {
-                console.error(err);
-                res.status(500).send('Error creating Project');
-            } else {
-                res.redirect('/dashboard');
-            }
-        });
+        res.status(201).json("You created a new project!");
+      } catch (err) {
+          console.log(err);
+          res.status(500).json(err);
+        }
       });
+        //     if (err) {
+        //         console.error(err);
+        //         res.status(500).send('Error creating Project');
+        //     } else {
+        //         res.redirect('/dashboard');
+        //     }
+        // });
+    
       
       router.put('/:id', async (req, res) => {
         try {
