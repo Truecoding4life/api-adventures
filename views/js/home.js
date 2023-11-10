@@ -1,7 +1,7 @@
-const existingProjects = document.querySelector("#existingProjects")
+const existingResources = document.querySelector("#existingResources")
 const createNew = document.querySelector("#createNew")
 const newComment = document.querySelector("#newComment")
-const newProject = document.querySelector('#newProject')
+const newResource = document.querySelector('#newResource')
 
 function hideCreateNew() {
     createNew.hidden=true;
@@ -12,33 +12,28 @@ hideCreateNew();
 newComment.addEventListener("submit",(event)=>{
     event.preventDefault()
     console.log('click')
-    existingProjects.hidden=true;
-    newProject.hidden =false;
+    existingResources.hidden=true;
+    newResource.hidden =false;
     createNew.hidden =false;
 });
 
-newProject.addEventListener("submit", (event) => {
+newResource.addEventListener("submit", (event) => {
     var title = document.querySelector("#title").value;
-    var description = document.querySelector("#description").value
-    var deployed_url = document.querySelector("#deployed-url").value;
-    var repo_url = document.querySelector("#repo-url").value
-    var user_id = document.querySelector("#user_id").value
+    var content = document.querySelector("#content").value
+
     //add additional Model variables here
 
     event.preventDefault()
     console.log('you clicked me')
-    if (!title || !description || !deployed_url || !repo_url || !user_id) {
-        alert('Please enter both title and description')
+    if (!title || !content) {
+        alert('Please enter both title and content')
         return;
     }
     const postObj = {
         title: title,
-        description: description,
-        deployed_url: deployed_url,
-        repo_url: repo_url,
-        user_id: user_id
+        content: content,
     }
-    fetch("/api/project",{
+    fetch("/api/resource",{
         method:"POST",
         body:JSON.stringify(postObj),
         headers:{
