@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Resource, Category, User, Project} = require('../../models');
 
-router.post('/resource', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
       const newResource = await Resource.create({ 
         title: req.body.title,
@@ -20,7 +20,7 @@ router.post('/resource', async (req, res) => {
 
   // Route to make a comment for a single resource
   // We might need this route later
-  router.post('/resource/:id', async (req, res) => {
+  router.post('/:id', async (req, res) => {
     try {
       const dbResourceData = await resource.findByPk(
         { where: { id: req.params.resource_id }});

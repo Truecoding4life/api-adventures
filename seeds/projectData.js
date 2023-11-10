@@ -17,6 +17,6 @@ const projectData = [
     },
 ];
 
-const seedProject = () => Project.create(projectData);
+const seedProject = () => Project.bulkCreate(projectData);
 
 module.exports = seedProject;
