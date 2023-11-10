@@ -1,7 +1,7 @@
 async function newResourceHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector("#comment").value;
+  const title = document.querySelector("#resource-title").value;
   const description = document.querySelector("#resource-description").value;
   const image_url = document.querySelector("#resource-image_url").value;
   const user_id = document.querySelector("#resource-user_id").value;
@@ -23,9 +23,9 @@ async function newResourceHandler(event) {
   });
 
   if (response.ok) {
-    document.location.replace("/");
+    document.location.replace("/"); //verify this is the correct route
   } else {
-    alert("Failed to add comment");
+    alert("Failed to add resource");
   }
 }
 
