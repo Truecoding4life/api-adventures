@@ -1,8 +1,7 @@
 const email = document.getElementById ('email').value.trim();
 const password = document.getElementById('password').value.trim();
 const emailSignup = document.getElementById('emailSignup').value.trim();
-const firstName = document.getElementById('firstName').value.trim();
-const lastName = document.getElementById('lastName').value.trim();
+const username = document.getElementById('username').value.trim();
 const passwordSignup = document.getElementById('passwordSignup').value.trim();
 
 const loginBox = document.getElementById('loginBox');
@@ -29,7 +28,7 @@ async function signUpHandler(event) {
     if(email && password) {
         const respond = await fetch('/api/signup', {
             methods: 'POST',
-            body: JSON.stringify({emailSignup, firstName, lastName, passwordSignup}), 
+            body: JSON.stringify({emailSignup, username,  passwordSignup}), 
             headers: {'Content-Type': 'application/json'},
         })
         if(respond.ok) {

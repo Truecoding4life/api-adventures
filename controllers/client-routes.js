@@ -1,17 +1,16 @@
 const router = require("express").Router();
-const { Resource, User, Project } = require('../models');
+const { Resource, User, Project ,Category} = require('../models');
 
 // home route
 router.get("/", async (req, res) => {
   try {
     if(req.session.loggedIn) {
-       const dbPostData = await Resource.findAll({
-      include: [{ model: Comment, include: [{ model: User }]}]
+       const dbCategoryData = await Category.findAll({
     });
-    res.json(posts);
-    const posts = dbPostData.map((post) => post.get({ plain: true }));
+    res.json(categories);
+    const categories = dbCategoryData.map((category) => category.get({ plain: true }));
     res.render("homepage", {
-      posts,
+      categories,
       loggedIn: req.session.loggedIn,
     });
     } else {
@@ -28,13 +27,13 @@ router.get("/", async (req, res) => {
 router.get("/dashboard", async (req, res) => {
   try {
     if(req.session.loggedIn){
-     const dbPostData = await Resource.findByPk({
+     const dbcategoryData = await Resource.findByPk({
       where: {
         user_id: req.session.user_id
       },});
-    const posts = dbPostData.map((post) => post.get({ plain: true }));
+    const categorys = dbcategoryData.map((category) => category.get({ plain: true }));
     res.render("dashboard", {
-      posts,
+      categorys,
       loggedIn: req.session.loggedIn,
     }); 
     }
