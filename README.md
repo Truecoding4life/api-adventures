@@ -6,6 +6,10 @@
 
 ## Technology Used:
 
+ * HTML - https://developer.mozilla.org/en-US/docs/Web/HTML
+ * CSS - https://developer.mozilla.org/en-US/docs/Web/CSS
+ * JavaScript -  https://developer.mozilla.org/en-US/docs/Web/JavaScript 
+ * BootStrap - https://getbootstrap.com
  * npm - https://www.npmjs.com/
  * mysql2 - https://www.npmjs.com/package/mysql2
  * sequelize - https://sequelize.org/
@@ -15,6 +19,8 @@
  * dotenv - https://www.npmjs.com/package/dotenv
  * handlebars - https://handlebarsjs.com/
  * bcrypt - https://www.npmjs.com/package/bcrypt
+ * MVC - https://developer.mozilla.org/en-US/docs/Glossary/MVC
+ * Unsplash API - https://unsplash.com/developers
 
  ## Description:
 
@@ -41,7 +47,7 @@
 
 ## Usage:
 
-**Home page**
+**Home page Input**
 
 ![Screenshot of home page](<add link to image>)
 
@@ -114,7 +120,9 @@
 
  ## Tests:
  
+ This application tested the the front end and backend routes using Insomnia Core application
 
+  ![Screenshot of Insomnia Routes Test](./public/image/Screenshot%20Insomnia%20Testing.png)
 
  ## Contributing:
 
