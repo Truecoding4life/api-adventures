@@ -1,5 +1,26 @@
 {{#if loggedIn}}
-{{#each posts as |post|}}
-{{> post-details}}
+  <div class="section">
+    <div class="container-fluid p-5">
+      <div class="row">
+
+      {{#each categories as |category|}}  
+        {{> category}}
+        
+
+        
+
+
+        
+
+        
+          
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
 {{/each}}
 {{/if}}

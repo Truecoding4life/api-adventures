@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User} = require('../../models');
+const { User } = require('../../models');
 
 // sign up route working, TESTED
 router.post('/signup', async (req, res) => {
@@ -9,11 +9,11 @@ router.post('/signup', async (req, res) => {
       email: req.body.email,
       password: req.body.password,
     });
-
+    const newUser = dbUserData.get({ plain: true });
     req.session.save(() => {
       req.session.loggedIn = true;
-      req.session.user_id = dbUserData.id
-      res.status(200).json(dbUserData);
+      req.session.user_id = newUser.id
+      res.status(200).json(newUser);
     });
   } catch (err) {
     console.log(err);
