@@ -1,24 +1,16 @@
-const email = document.getElementById ('email').value.trim();
-const password = document.getElementById('password').value.trim();
-const emailSignup = document.getElementById('emailSignup').value.trim();
-const username = document.getElementById('username').value.trim();
-const passwordSignup = document.getElementById('passwordSignup').value.trim();
-
-const loginBox = document.getElementById('loginBox');
-const signUp = document.getElementById('signUp');
-
-loginBox.addEventListener('submit', loginHandler);
-signUp.addEventListener('submit', signUpHandler);
+// Login and Sign up handler
 
 const loginHandler = async (event) => {
     event.preventDefault();
+const email = document.querySelector('#email').value.trim();
+const password = document.querySelector('#password').value.trim();
     if(email && password) {
-        const respond = await fetch('/api/login', {
-            methods: 'POST',
+        const response = await fetch('/api/login', {
+            method: 'POST',
             body: JSON.stringify({email, password}), 
             headers: {'Content-Type': 'application/json'},
         })
-        if(respond.ok) {
+        if(response.ok) {
             alert('You are now logged in')
             document.location.replace('/dashboard');
         } else {
@@ -26,14 +18,23 @@ const loginHandler = async (event) => {
         }   
     }    
 };
+
+
 const signUpHandler = async (event) => {
-    if(emailSignup && passwordSignup && username) {
-        const respond = await fetch('/api/signup', {
-            methods: 'POST',
-            body: JSON.stringify({emailSignup, username,  passwordSignup,}), 
+    event.preventDefault();
+const email = document.querySelector('#emailSignup').value.trim();
+const username = document.querySelector('#username').value.trim();
+const password = document.querySelector('#passwordSignup').value.trim();
+    if(email && password && username) {
+        const response = await fetch('/api/signup', {
+            method: 'POST',
+            body: JSON.stringify({ 
+                email: email, 
+                username: username,  
+                password:password, }), 
             headers: {'Content-Type': 'application/json'},
         })
-        if(respond.ok) {
+        if(response.ok) {
             alert('You are now signed up successful')
             document.location.replace('/dashboard');
         } else {
@@ -41,3 +42,8 @@ const signUpHandler = async (event) => {
         }   
     }
 }
+
+const loginBox = document.querySelector('#loginBox');
+const signUp = document.querySelector('#signUp');
+loginBox.addEventListener('submit', loginHandler);
+signUp.addEventListener('submit', signUpHandler);
