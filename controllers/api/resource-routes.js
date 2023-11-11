@@ -9,7 +9,6 @@ router.post("/", async (req, res) => {
       description: req.body.description,
       image_url: req.body.image_url,
       user_id: req.session.user_id,
-      tag: req.body.tag,
       category_id: req.body.category_id,
     });
     res.status(201).json("You created a new resource!");
@@ -19,7 +18,7 @@ router.post("/", async (req, res) => {
   }
 });
 // Route to resources by Category, needs testing
-router.get('/search', async (req, res) => {
+router.post('/search', async (req, res) => {
   const { categoryId } = req.query;
 
   try {
