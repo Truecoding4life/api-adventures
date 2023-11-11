@@ -26,13 +26,13 @@ router.get("/", async (req, res) => {
 router.get("/dashboard", async (req, res) => {
   try {
     if(req.session.loggedIn){
-     const dbcategoryData = await Resource.findByPk({
+     const dbcategoryData = await Resource.findAll({
       where: {
         user_id: req.session.user_id
       },});
-    const categorys = dbcategoryData.map((category) => category.get({ plain: true }));
+    const categories = dbcategoryData.map((category) => category.get({ plain: true }));
     res.render("dashboard", {
-      categorys,
+      categories,
       loggedIn: req.session.loggedIn,
     }); 
     }
