@@ -92,6 +92,20 @@ router.get("/login", async (req, res) => {
     res.status(500).json(err);
   }
 });
+router.get('/logout' , async (req,res)=>{
+  try{
+    if(req.session.loggedIn){
+      req.session.destroy(()=>{
+        res.status(204).redirect('login');
+      })
+    }
+    else {
+      res.status(404).end();
+    }
+  } catch(err){
+    res.status(500).json(err);
+  }
+})
 
 
 
