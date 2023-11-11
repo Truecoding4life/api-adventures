@@ -1,13 +1,13 @@
 const router = require('express').Router();
-const { User} = require('../../models');
+const { User } = require('../../models/user');
 
 // sign up route working, TESTED
 router.post('/signup', async (req, res) => {
   try {
     const dbUserData = await User.create({
       username: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
+      email: req.body.emailSignup,
+      password: req.body.passwordSignup,
     });
 
     req.session.save(() => {
