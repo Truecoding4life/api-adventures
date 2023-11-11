@@ -36,7 +36,7 @@ const password = document.querySelector('#passwordSignup').value.trim();
         })
         if(response.ok) {
             alert('You are now signed up successful')
-            document.location.replace('/dashboard');
+            document.location.replace('/');
         } else {
             alert('Please enter a valid email and password');
         }   

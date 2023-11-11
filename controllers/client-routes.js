@@ -7,14 +7,13 @@ router.get("/", async (req, res) => {
     if(req.session.loggedIn) {
        const dbCategoryData = await Category.findAll({
     });
-    res.json(categories);
     const categories = dbCategoryData.map((category) => category.get({ plain: true }));
-    res.render("homepage", {
+    res.render("categorypage", {
       categories,
       loggedIn: req.session.loggedIn,
     });
     } else {
-      res.status(200).render("login");
+      res.status(200).render("homepage");
     }
     } 
     catch (err) {

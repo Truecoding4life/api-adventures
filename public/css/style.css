@@ -3,10 +3,14 @@ header {
     padding: 50px;
     margin-top: 50px;
     border-radius: 20px;
-    margin-bottom: 130px;
+    margin-bottom: 12px;
 }
 .col-5 {
     background-color: rgba(74, 76, 76, 0.359);
     padding: 50px;
     border-radius: 20px;
+}
+nav {
+    background-color: rgba(183, 183, 179, 0.822);
+    border-radius: 15px;
 }
