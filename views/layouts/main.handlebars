@@ -23,6 +23,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link " href="/login">Login</a>
+            </li>
+            {{#if loggedIn}}
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard </a>
             </li>
@@ -30,15 +35,7 @@
               <a class="nav-link" href="/project">Project</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="/login">Login</a>
-            </li>
-            {{#if loggedIn}}
-            <li class="nav-item">
               <a class="nav-link" href="/logout">Logout</a>
-            </li>
-            {{else}}
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Logout</a>
             </li>
             {{/if}}
 
@@ -49,7 +46,7 @@
   </div>
 
 
-{{{body}}}
+  {{{body}}}
 
 
 
