@@ -7,10 +7,10 @@ async function newResourceHandler(event) {
   const description = document.querySelector("#resource-description").value;
   // const image_url = document.querySelector("#resource-image_url").value;
   const user_id = document.querySelector("#resource-user_id").value;
-  const category_id = document.querySelector("#resource-category_id").value;
+  const category_name = document.querySelector("#resource-category_name").value;
 
   const api_Key = process.env.API_KEY; //
-  const url = `https://api.unsplash.com/photos/random?query=${category_id}&orientation=squarish&client_id=${api_Key}`;
+  const url = `https://api.unsplash.com/photos/random?query=${category_name}&orientation=squarish&client_id=${api_Key}`;
 
   try {
     const unsplashResponse = await fetch(url);
