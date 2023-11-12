@@ -1,9 +1,15 @@
         <div class="card bg-body-tertiary mb-4">
-                    <img src="{{image_url}}" class="card-img-top" alt="resource image">
-                    <div class="card-body">
-                        <h5 class="card-title">{{title}}</h5>
-                        <p class="card-text">{{description}}.</p>
-                        <a href="/resource/{{id}}" class="btn btn-primary">Go to post</a>
-                    </div>
+            <div class="row">
+                <div class="col-4 col-lg-3">
+                <img src="{{image_url}}" class="card-img-top" alt="resource image" style="max-width:200px; max-height:200px;">
+            </div>
+            <div class="col-6">
+                <div class="card-body" >
+                    <h5 class="card-title">{{title}}</h5>
+                    <p class="card-text">{{description}}.</p>
+                    <a href="/resource/{{id}}" class="btn btn-primary">Go to post</a>
                 </div>
+            </div>
+            </div>
+        </div>
                 
