@@ -7,7 +7,6 @@ async function newResourceHandler(event) {
   const user_id = document.querySelector("#resource-user_id").value;
   const category_id = document.querySelector("#resource-category_id").value;
   
-
   const response = await fetch(`/api/resource`, {
     method: "POST",
     body: JSON.stringify({
