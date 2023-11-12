@@ -8,16 +8,18 @@ async function newResourceHandler(event) {
   const category_id = document.querySelector('#inputCategory').value;
   // const image_url = document.querySelector("#resource-image_url").value;
   const user_id = document.querySelector("#user_id").value;
-  
+  // const category_name = document.querySelector("#category_id").value;
 
+  const categoryArr = ["sports", "food", "music", "weather", "events", "gaming", "technologies", "shopping"]
+  
   const api_Key = "jJoD--t-YwtUk6AG6cgPNH_tl8JWeW-c6MEmMUCfm_8"; //
-  const url = `https://api.unsplash.com/photos/random?query=${category_id}&orientation=squarish&client_id=${api_Key}`;
+  const url = `https://api.unsplash.com/photos/random?query=${categoryArr[category_id-1]}&orientation=squarish&client_id=${api_Key}`;
 
   try {
     const unsplashResponse = await fetch(url);
     const unsplashData = await unsplashResponse.json();
 
-    const image_url = "";
+    const image_url = unsplashData.urls.thumb;
 
     const response = await fetch(`/api/resource`, {
       method: "POST",
