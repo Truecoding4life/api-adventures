@@ -12,7 +12,7 @@ const password = document.querySelector('#password').value.trim();
         })
         if(response.ok) {
             alert('You are now logged in')
-            document.location.replace('/dashboard');
+            document.location.replace('/');
         } else {
             alert('Failed to log in');
         }   

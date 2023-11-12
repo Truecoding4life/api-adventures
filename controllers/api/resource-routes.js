@@ -17,6 +17,30 @@ router.post("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+// Route to resources by Category, needs testing
+router.get('/search', async (req, res) => {
+  const { categoryId } = req.query;
+
+  try {
+    const resources = await Resource.findAll({
+      include: [
+        {
+          model: Category,
+          where: categoryId ? { id: categoryId } : {},
+          attributes: [], // exclude category fields from the result
+        },
+      ],
+      attributes: ['id', 'title', 'description'], // specify the fields you want to retrieve
+    });
+
+    res.render('search-results', { resources });// update handlebars template file name
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
 
 // Route to make a comment for a single resource
 // We might need this route later

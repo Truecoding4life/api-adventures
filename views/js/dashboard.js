@@ -1,7 +1,7 @@
-const existingProjects = document.querySelector("#existingProjects")
+const existingResource = document.querySelector("#existingResource")
 const createNew = document.querySelector("#createNew")
 const newComment = document.querySelector("#newComment")
-const newProject = document.querySelector('#newProject')
+const newResource = document.querySelector('#newResource')
 
 function hideCreateNew() {
     createNew.hidden=true;

@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config(); //verify if this is needed
 
 async function newResourceHandler(event) {
   event.preventDefault();
