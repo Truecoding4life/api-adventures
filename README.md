@@ -86,7 +86,27 @@
 
  This application utilizes the Unsplash API to get a random photo and sets it as a Project or resource category profile image.  The Unspash API allows us to filter the searches and retrieve a random photo for the user and a search a topic realated photo for the resource category.
 
- ![Screenshot of create project form](<add link to image>)
+ below is code snippet to get a random Photo based on
+
+  
+    const url = `https://api.unsplash.com/photos/random?query=${category_id}&orientation=squarish&client_id=${api_Key}`;
+
+    try {
+    const unsplashResponse = await fetch(url);
+    const unsplashData = await unsplashResponse.json();
+    const image_url = unsplashData.urls.small;
+
+    const response = await fetch(`/api/resource`, {
+      method: "POST",
+      body: JSON.stringify({image_url,}),
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+   } catch (error) {
+    console.error("Error fetching photo from Unsplash:", error);
+    alert("Failed to fetch photo from Unsplash");
+   }
 
 ---
 
