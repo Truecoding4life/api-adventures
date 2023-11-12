@@ -17,7 +17,7 @@ async function newResourceHandler(event) {
     const unsplashResponse = await fetch(url);
     const unsplashData = await unsplashResponse.json();
 
-    const image_url = "";
+    const image_url = unsplashData.urls.small;
 
     const response = await fetch(`/api/resource`, {
       method: "POST",
