@@ -30,10 +30,11 @@ router.get("/dashboard", async (req, res) => {
       where: {
         user_id: req.session.user_id
       },});
-    const categories = dbcategoryData.map((category) => category.get({ plain: true }));
+    const resources = dbcategoryData.map((category) => category.get({ plain: true }));
     res.render("dashboard", {
-      categories,
+      resources,
       loggedIn: req.session.loggedIn,
+      user_id: req.session.user_id,
     }); 
     }
     else {

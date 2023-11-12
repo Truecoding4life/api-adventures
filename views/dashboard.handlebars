@@ -1,15 +1,16 @@
 <div class="section mt-5">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-6">
-                {{#each resource}}
+            <div class="col-6 col-lg-8">
+                {{#each resources as |resource|}}
                 {{> resource-details}}
                 {{/each}}
                 <div class="col-6 col-lg-4">
                     <div class="form-title text-white mb-4">
                         <h1>Create Resource</h1>
+                        <p id="user_id" hidden="true" class="text-white" >{{user_id}}</p>
                     </div>
-                    <form class="row g-3">
+                    <form class="row g-3 createform">
                         <div class="col-12">
                             <label for="inputTitle" class="form-label text-white">Title</label>
                             <input type="text" class="form-control" id="inputTitle" placeholder="Enter resource title">
@@ -27,9 +28,11 @@
                             <label for="inputCategory" class="form-label text-white">Category</label>
                             <select id="inputCategory" class="form-select">
                                 <option selected>Select resource category</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="food">Food</option>
+                                <option value="weather">Weather</option>
+                                <option value="map">Map</option>
+                                <option value="technology">Technology</option>
+                                <option value="shopping">Shopping</option>
                             </select>
                         </div>
                         <div class="col-md-2">
@@ -45,10 +48,11 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Add Resource</button>
+                            <button type="submit" class="btn btn-primary">Create Resource</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+        <script src="/js/resource-with.js"></script>
     </div>

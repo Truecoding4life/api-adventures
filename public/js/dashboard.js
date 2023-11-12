@@ -1,21 +1,38 @@
+
 const existingResource = document.querySelector("#existingResource")
 const createNew = document.querySelector("#createNew")
 const newComment = document.querySelector("#newComment")
 const newResource = document.querySelector('#newResource')
+const newProject = document.querySelector('#newProject')
 
-function hideCreateNew() {
-    createNew.hidden=true;
+const createResourceHandler = async (event) => {
+    const title = document.querySelector("#inputTitle")
+    const description = document.querySelector("#Resource-description")
+    const tag = document.querySelector("#inputTags")
+    const category = document.querySelector('#inputCategory')
+
+
 }
 
-hideCreateNew();
+const form = document.querySelector("createform")
 
-newComment.addEventListener("submit",(event)=>{
-    event.preventDefault()
-    console.log('click')
-    existingProjects.hidden=true;
-    newProject.hidden =false;
-    createNew.hidden =false;
-});
+
+
+
+
+// function hideCreateNew() {
+//     createNew.hidden=true;
+// }
+
+// hideCreateNew();
+
+// newComment.addEventListener("submit",(event)=>{
+//     event.preventDefault()
+//     console.log('click')
+//     existingProjects.hidden=true;
+//     newProject.hidden =false;
+//     createNew.hidden =false;
+// });
 
 newProject.addEventListener("submit", (event) => {
     var title = document.querySelector("#title").value;
