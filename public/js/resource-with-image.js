@@ -1,22 +1,23 @@
-require("dotenv").config(); //verify if this is needed
 
 async function newResourceHandler(event) {
   event.preventDefault();
 
-  const title = document.querySelector("#resource-title").value;
-  const description = document.querySelector("#resource-description").value;
+  const title = document.querySelector("#inputTitle").value.trim();
+  const description = document.querySelector("#Resource-description").value.trim();
+  const tag = document.querySelector("#inputTags").value.trim();
+  const category_id = document.querySelector('#inputCategory').value;
   // const image_url = document.querySelector("#resource-image_url").value;
-  const user_id = document.querySelector("#resource-user_id").value;
-  const category_name = document.querySelector("#resource-category_name").value;
+  const user_id = document.querySelector("#user_id").value;
+  
 
-  const api_Key = process.env.API_KEY; //
-  const url = `https://api.unsplash.com/photos/random?query=${category_name}&orientation=squarish&client_id=${api_Key}`;
+  const api_Key = "jJoD--t-YwtUk6AG6cgPNH_tl8JWeW-c6MEmMUCfm_8"; //
+  const url = `https://api.unsplash.com/photos/random?query=${category_id}&orientation=squarish&client_id=${api_Key}`;
 
   try {
     const unsplashResponse = await fetch(url);
     const unsplashData = await unsplashResponse.json();
 
-    const image_url = unsplashData.urls.small;
+    const image_url = "";
 
     const response = await fetch(`/api/resource`, {
       method: "POST",
@@ -33,7 +34,7 @@ async function newResourceHandler(event) {
     });
 
     if (response.ok) {
-      document.location.replace("/"); //verify this is the correct route
+      document.location.replace("/dashboard"); //verify this is the correct route
     } else {
       alert("Failed to add resource");
     }
@@ -44,5 +45,5 @@ async function newResourceHandler(event) {
 }
 
 document
-  .querySelector(".new-resource-form")
+  .querySelector(".createform")
   .addEventListener("submit", newResourceHandler);
