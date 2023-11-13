@@ -1,7 +1,7 @@
-const User = require('./user');
-const Resource = require('./resource');
-const Project = require('./project');
-const Category = require('./category');
+const User = require('./User');
+const Resource = require('./Resource');
+const Project = require('./Project');
+const Category = require('./Category');
 
 
 // Relationship between User and Resource
