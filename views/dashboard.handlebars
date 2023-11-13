@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-1"></div>
-            <div class="col-12 col-sm-12 col-lg-5">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5">
                 <div class="card-title text-white mb-4">
                     <h1> Your Resources </h1>
                 </div>
@@ -10,7 +10,8 @@
                 {{> resource-details}}
                 {{/each}}
             </div>
-            <div class="col-12 col-sm-12 col-lg-4">
+            <div class="col-1"></div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3">
                 <div class="form-title text-white mb-4">
                         <h1>Create Resource</h1>
                         <p id="user_id" hidden="true" class="text-white" >{{user_id}}</p>
@@ -42,18 +43,6 @@
                                 <option value="7" id="technologies">technologies</option>
                                 <option value="8" id="shopping">shopping</option>
                             </select>
-                        </div>
-                        <div class="col-md-2">
-                            <label for="inputImage" class="form-label text-white">Image</label>
-                            <input type="text" class="form-control" id="inputImage" placeholder="url">
-                        </div>
-                        <div class="col-12">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label text-white" for="gridCheck">
-                                    Add Image
-                                </label>
-                            </div>
                         </div>
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary">Create Resource</button>
