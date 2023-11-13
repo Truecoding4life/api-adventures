@@ -49,33 +49,39 @@
 
 **Home page Input**
 
-![Screenshot of home page](<add link to image>)
+![Screenshot of home page](< get started page>)
+
+---
+
+**Resource Index**
+
+![Screenshot of resource index](./public/image/Resources.png)
 
 ---
 
 **My Dashboard**
 
-![Screenshot of My Dashboard](<add link to image>)
+![Screenshot of My Dashboard](./public/image/Dashboard.png)
 
 ---
 
 **Login/Signup**
 
-![Screenshot of Login/Signup form](<add link to image>)
+![Screenshot of Login/Signup form](./public/image/Login:Signup%20Page.png)
 
 
 ---
 
 **Create Resource**
 
-![Screenshot of create resouce form](<add link to image>)
+![Screenshot of create resource form](./public/image/Your%20Resources.png)
 
 
 ---
 
 **Create Project**
 
-![Screenshot of create project form](<add link to image>)
+![Screenshot of create project form]()
 
 
 ---
@@ -84,7 +90,7 @@
 
  **Random Photo Search:**
 
- This application utilizes the Unsplash API to get a random photo and sets it as a Project or resource category profile image.  The Unspash API allows us to filter the searches and retrieve a random photo for the user and a search a topic realated photo for the resource category.
+ This application utilizes the Unsplash API to get a random photo and sets it as a Project or resource category profile image.  The Unsplash API allows us to filter the searches and retrieve a random photo for the user and a search a topic related photo for the resource category.
 
  below is code snippet to get a random Photo based on
 
@@ -158,9 +164,9 @@
 
  Armando Arujo
 
- - [Portfolio](#)
- - [LinkedIn](#)
- - [GitHub](#)
+ - [Portfolio](https://armand57araujo.github.io/Portfolio/)
+ - [LinkedIn](https://www.linkedin.com/in/armand-araujo-a82ba2291/)
+ - [GitHub](https://armand57araujo.github.io/Portfolio/)
 
  Thai Nghiem
 
