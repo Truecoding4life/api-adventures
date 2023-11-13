@@ -1,0 +1,60 @@
+<div class="section mt-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5">
+                <div class="card-title text-white mb-4">
+                    <h3> <i class="bi bi-file-person"></i> Your Projects </h3>
+                </div>
+                {{#each projects as |project|}}
+                {{> project-details}}
+                {{/each}}
+            </div>
+            <div class="col-1"></div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3">
+                <div class="form-title text-white mb-4">
+                        <h3><i class="bi bi-plus-circle"></i> Create Project</h3>
+                        <p id="user_id" hidden="true" class="text-white" >{{user_id}}</p>
+                    </div>
+                    <form class="row g-3 createform">
+                        <div class="col-12">
+                            <label for="inputTitle" class="form-label text-white">Title</label>
+                            <input type="text" class="form-control" id="inputTitle" placeholder="Enter resource title">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputDescription" class="form-label text-white">Description</label>
+                            <textarea class="form-control" id="Resource-description" rows="3"
+                                placeholder="Resource Description"></textarea>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputCategory" class="form-label text-white">Category</label>
+                            <select id="inputCategory" class="form-select">
+                                <option selected>Select </option>
+                                <option value="1" id="sports">sports</option>
+                                <option value="2" id="food">food</option>
+                                <option value="3" id="music">music</option>
+                                <option value="4" id="weather">weather</option>
+                                <option value="5" id="events">events</option>
+                                <option value="6" id="gaming">gaming</option>
+                                <option value="7" id="technologies">technologies</option>
+                                <option value="8" id="shopping">shopping</option>
+                            </select>
+                        </div><br>
+                        <div class="col-md-6">
+                            <label for="deloyed_url" class="form-label text-white">deployed URL</label>
+                            <input type="text" class="form-control" id="deloyed_url" placeholder="Enter deloyed url here">
+                        </div>
+                         <div class="col-md-6">
+                            <label for="repo_url" class="form-label text-white">repo URL</label>
+                            <input type="text" class="form-control" id="repo_url" placeholder="Enter deloyed url here">
+                        </div>
+                        
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Create Project</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="/js/project-with-image.js"></script>
+    </div>
