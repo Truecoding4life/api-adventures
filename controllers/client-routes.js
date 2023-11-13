@@ -1,22 +1,22 @@
 const router = require("express").Router();
-const { Resource, User, Project ,Category} = require('../models');
+const { Resource, User, Project, Category } = require("../models");
 
 // home route
 router.get("/", async (req, res) => {
   try {
-    if(req.session.loggedIn) {
-       const dbCategoryData = await Category.findAll({
-    });
-    const categories = dbCategoryData.map((category) => category.get({ plain: true }));
-    res.render("homepage", {
-      categories,
-      loggedIn: req.session.loggedIn,
-    });
+    if (req.session.loggedIn) {
+      const dbCategoryData = await Category.findAll({});
+      const categories = dbCategoryData.map((category) =>
+        category.get({ plain: true })
+      );
+      res.render("homepage", {
+        categories,
+        loggedIn: req.session.loggedIn,
+      });
     } else {
       res.status(200).render("homepage");
     }
-    } 
-    catch (err) {
+  } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
@@ -25,21 +25,23 @@ router.get("/", async (req, res) => {
 // Dashboard route
 router.get("/dashboard", async (req, res) => {
   try {
-    if(req.session.loggedIn){
-     const dbcategoryData = await Resource.findAll({
-      where: {
-        user_id: req.session.user_id
-      },
-      include: {model: Category, attributes: ['category_name']}
-    });
-    const resources = dbcategoryData.map((category) => category.get({ plain: true }));
-    res.render("dashboard", {
-      resources,
-      loggedIn: req.session.loggedIn,
-      user_id: req.session.user_id,
-    }); 
-    }
-    else {
+    if (req.session.loggedIn) {
+      const dbCategoryData = await Resource.findAll({
+        where: {
+          user_id: req.session.user_id,
+        },
+        include: { model: Category, attributes: ["category_name"] },
+      });
+      const resources = dbCategoryData.map((category) =>
+        category.get({ plain: true })
+      );
+      res.render("dashboard", {
+        resources,
+        loggedIn: req.session.loggedIn,
+        user_id: req.session.user_id,
+        
+      });
+    } else {
       res.status(200).render("login");
     }
   } catch (err) {
@@ -56,9 +58,11 @@ router.get("/category/:id", async (req, res) => {
         where: {
           category_id: req.params.id,
         },
-        include: {model: Category, attributes: ['category_name']}
+        include: { model: Category, attributes: ["category_name"] },
       });
-      const resources = dbcategoryData.map((category) => category.get({ plain: true }));
+      const resources = dbcategoryData.map((category) =>
+        category.get({ plain: true })
+      );
       res.render("resource-by-category", {
         resources,
         loggedIn: req.session.loggedIn,
@@ -74,14 +78,14 @@ router.get("/category/:id", async (req, res) => {
 });
 
 // Project route
-router.get('/project/:id', async (req, res) => {
+router.get("/project/:id", async (req, res) => {
   try {
     const dbprojectData = await Project.findByPk(req.params.id, {
       include: [
         {
           model: Project,
-          attributes: ['title', 'user_id'],
-          include: [{ model: Project, include: [{ model: User }]}]
+          attributes: ["title", "user_id"],
+          include: [{ model: Project, include: [{ model: User }] }],
         },
       ],
     });
@@ -95,14 +99,14 @@ router.get('/project/:id', async (req, res) => {
 });
 
 // Project route
-router.get('/project', async(req,res)=>{
-  try{
-    res.render('project', { Project, loggedIn: req.session.loggedIn });
+router.get("/project", async (req, res) => {
+  try {
+    res.render("project", { Project, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
-})
+});
 
 // login route
 router.get("/login", async (req, res) => {
@@ -122,8 +126,10 @@ router.get("/resource/:id", async (req, res) => {
   try {
     if (req.session.loggedIn) {
       const resourceData = await Resource.findByPk(req.params.id, {
-        include: [{model: User,
-          // include: [{model: Comment,}],
+        include: [
+          {
+            model: User,
+            // include: [{model: Comment,}],
           },
         ],
       });
@@ -132,7 +138,10 @@ router.get("/resource/:id", async (req, res) => {
         console.log(resource);
         res
           .status(200)
-          .render("one-resource-detail", { resource: resource, loggedIn: req.session.loggedIn });
+          .render("one-resource-detail", {
+            resource: resource,
+            loggedIn: req.session.loggedIn,
+          });
       } else {
         res.status(404).render("dashboard");
       }
@@ -142,23 +151,18 @@ router.get("/resource/:id", async (req, res) => {
   }
 });
 
-
-
-router.get('/logout' , async (req,res)=>{
-  try{
-    if(req.session.loggedIn){
-      req.session.destroy(()=>{
-        res.status(204).redirect('login');
-      })
-    }
-    else {
+router.get("/logout", async (req, res) => {
+  try {
+    if (req.session.loggedIn) {
+      req.session.destroy(() => {
+        res.status(204).redirect("login");
+      });
+    } else {
       res.status(404).end();
     }
-  } catch(err){
+  } catch (err) {
     res.status(500).json(err);
   }
-})
-
-
+});
 
 module.exports = router;
