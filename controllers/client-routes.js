@@ -48,9 +48,32 @@ router.get("/dashboard", async (req, res) => {
   }
 });
 
-// Project route
+// Resource by category route
+router.get("/category/:id", async (req, res) => {
+  try {
+    if (req.session.loggedIn) {
+      const dbcategoryData = await Resource.findAll({
+        where: {
+          category_id: req.params.id,
+        },
+        include: {model: Category, attributes: ['category_name']}
+      });
+      const resources = dbcategoryData.map((category) => category.get({ plain: true }));
+      res.render("resource-by-category", {
+        resources,
+        loggedIn: req.session.loggedIn,
+        user_id: req.session.user_id,
+      });
+    } else {
+      res.status(200).render("login");
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
-//find one project by id: 
+// Project route
 router.get('/project/:id', async (req, res) => {
   try {
     const dbprojectData = await Project.findByPk(req.params.id, {
@@ -118,6 +141,9 @@ router.get("/resource/:id", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
 router.get('/logout' , async (req,res)=>{
   try{
     if(req.session.loggedIn){
