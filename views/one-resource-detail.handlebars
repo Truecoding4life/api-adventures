@@ -2,14 +2,14 @@
  <div class="section mt-5">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-0 col-sm-1 col-xl-2"> </div>
-        <div class="col-12 col-sm-3 col-xl-4">
-          <div class="card bg-body-tertiary mb-4">
-            <div class="card-header border">
-              <h3>{{resource.title}}</h3>
+        <div class="col-0 col-sm-1 col-md-1 col-lg-1 col-xl-3"> </div>
+        <div class="col-12 col-sm-4 col-xl-2 mb-5 ">
+          <div class="card bg-body-tertiary mb-4 ">
+            <div class="card-header ">
+              <h4>{{resource.title}}</h4>
             </div>
             <img src="{{resource.image_url}}"
-              class="card-img-top" alt="none">
+              class="card-img-top rounded" alt="none">
             <div class="card-body">
 
               <h6 class="card-text">{{resource.description}}.</h6>
@@ -21,10 +21,10 @@
 
 
 
-        <div class="col-12 col-sm-4 col-lg-3 col-xl-2">
-          <form class="row g-3" id="editedResource">
-            <div class="form-title text-white mb-4">
-              <h1>Update/Delete Resource</h1>
+        <div class="col-12 col-sm-5 col-lg-3 col-xl-2">
+          <form class="row g-3 p-4" id="updateform">
+            <div class="form-title text-white mb-4 bg-dark p-3 rounded">
+              <h5>Update/Delete Resource</h5>
             </div>
             <div class="col-12">
               <label for="inputTitle" class="form-label text-white">Title</label>
@@ -39,11 +39,11 @@
             <div class="col-md-6">
               <label for="inputTags" class="form-label text-white">Tags</label>
               <input type="text" class="form-control" id="inputTags" placeholder="Enter resource tag(s)">
-            </div> --}}
+            </div> 
             <div class="col-md-4">
               <label for="inputCategory" class="form-label text-white">Category</label>
               <select id="inputCategory" class="form-select">
-                <option selected>Select resource category</option>
+                <option selected>Select </option>
                 <option value="1" id="sports">sports</option>
                 <option value="2" id="food">food</option>
                 <option value="3" id="music">music</option>
@@ -59,9 +59,9 @@
               <input type="text" class="form-control" id="inputImage" value="{{resource.image_url}}">
             </div>
 
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary" id="update">Update Resource</button>
-              <button type="submit" class="btn btn-primary" id="delete">Delete Resource</button>
+            <div class="col-12 d-flex mt-4">
+              <button type="submit" class="btn btn-success me-2  col-sm-6" id="update">Update Resource</button>
+              <button type="submit" class="btn btn-danger col-sm-6" id="delete">Delete Resource</button>
             </div>
           </form>
         </div>

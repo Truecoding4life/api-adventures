@@ -34,3 +34,8 @@ nav a {
 .nav-item a:hover {
     color: rgba(81, 170, 190, 0.853);
 }
+
+#updateform {
+    background-color: rgba(46, 85, 94, 0.661);
+    border-radius: 30px;
+}
