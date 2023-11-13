@@ -23,9 +23,7 @@
  * Unsplash API - https://unsplash.com/developers
 
  ## Description:
-API Adventures is an API index by category, for developers, with the ability to save API resources to a user dashboard, create new API resources and add to the index. 
-
-API Adventures is a robust web application built using Node.js, Express.js, and MySQL, following the MVC paradigm to ensure a structured and maintainable codebase. It offers a secure and interactive platform with RESTful API endpoints for data retrieval and addition. The application employs Handlebars.js as the templating engine for dynamic content rendering.
+API Adventures is an API index by category, for developers, with the ability to save API resources to a user dashboard, create new API resources and add to the index. It is a full-stack web application built using Node.js, Express.js, and MySQL, following the MVC paradigm to ensure a structured and maintainable codebase. It offers a secure and interactive platform with RESTful API endpoints for data retrieval and addition. The application employs Handlebars.js as the templating engine for dynamic content rendering.
 
 
 
@@ -51,13 +49,26 @@ API Adventures is a robust web application built using Node.js, Express.js, and 
 
 ## Usage:
 
-**Home page Input**
+**Home Page**
+
+The homepage provides users with a streamlined experience to enter the APi index within the site.
 
 ![Screenshot of home page](< get started page>)
 
 ---
 
+**Login/Sign Up**
+
+Existing users have the ability to log in and new users have the ability to sign up. 
+
+![Screenshot of Login/Signup form](./public/image/Login:Signup%20Page.png)
+
+
+---
+
 **Resource Index**
+
+The resource index provides users with an at-a-glance view of all of the resource categories. Each API resource is assigned a category to correspond with it's use-case. 
 
 ![Screenshot of resource index](./public/image/Resources.png)
 
@@ -65,18 +76,15 @@ API Adventures is a robust web application built using Node.js, Express.js, and 
 
 **My Dashboard**
 
+Each user has a dashboard, which can be accessed after logging in.
+
 ![Screenshot of My Dashboard](./public/image/Dashboard.png)
 
 ---
 
-**Login/Signup**
-
-![Screenshot of Login/Signup form](./public/image/Login:Signup%20Page.png)
-
-
----
-
 **Create Resource**
+
+Resources can be added to a user's dashboard by creating a resource.
 
 ![Screenshot of create resource form](./public/image/Your%20Resources.png)
 
