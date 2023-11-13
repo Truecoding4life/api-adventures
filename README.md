@@ -23,6 +23,8 @@
  * Unsplash API - https://unsplash.com/developers
 
  ## Description:
+API Adventures is an API index by category, for developers, with the ability to save API resources to a user dashboard, create new API resources and add to the index. It is a full-stack web application built using Node.js, Express.js, and MySQL, following the MVC paradigm to ensure a structured and maintainable codebase. It offers a secure and interactive platform with RESTful API endpoints for data retrieval and addition. The application employs Handlebars.js as the templating engine for dynamic content rendering.
+
 
 
 
@@ -40,55 +42,90 @@
 
 ## Installation:
   
-* To install all dependences, run: npm install
+* To install all dependencies, run: npm install
 * Create the database in MYSQL using the schema.sql.
 * To load the seeds into the database, run: npm run seed 
 * To start the server, run: node server.js
 
 ## Usage:
 
-**Home page Input**
+**Home Page**
 
-![Screenshot of home page](<add link to image>)
+The homepage provides users with a streamlined experience to enter the APi index within the site.
+
+![Screenshot of home page](< get started page>)
+
+---
+
+**Login/Sign Up**
+
+Existing users have the ability to log in and new users have the ability to sign up. 
+
+![Screenshot of Login/Signup form](./public/image/Login:Signup%20Page.png)
+
+
+---
+
+**Resource Index**
+
+The resource index provides users with an at-a-glance view of all of the resource categories. Each API resource is assigned a category to correspond with it's use-case. 
+
+![Screenshot of resource index](./public/image/Resources.png)
 
 ---
 
 **My Dashboard**
 
-![Screenshot of My Dashboard](<add link to image>)
+Each user has a dashboard, which can be accessed after logging in.
 
----
-
-**Login/Signup**
-
-![Screenshot of Login/Signup form](<add link to image>)
-
+![Screenshot of My Dashboard](./public/image/Dashboard.png)
 
 ---
 
 **Create Resource**
 
-![Screenshot of create resouce form](<add link to image>)
+Resources can be added to a user's dashboard by creating a resource.
+
+![Screenshot of create resource form](./public/image/Your%20Resources.png)
 
 
 ---
 
 **Create Project**
 
-![Screenshot of create project form](<add link to image>)
+![Screenshot of create project form]()
 
 
 ---
 
 ### Highlighted Features:
 
- **Random Photo Search:**
+**RESTful API:** Utilizing Node.js and Express.js, the application provides both GET and POST routes to facilitate seamless interaction with the database.
+![code snippet]()
 
- This application utilizes the Unsplash API to get a random photo and sets it as a Project or resource category profile image.  The Unspash API allows us to filter the searches and retrieve a random photo for the user and a search a topic realated photo for the resource category.
+**Database Integration:** MySQL is employed as the relational database, and Sequelize ORM streamlines data management, ensuring efficient and organized storage.
 
- below is code snippet to get a random Photo based on
+**Deployment on Heroku:** API Adventures is hosted on Heroku, ensuring accessibility and scalability. The deployment includes the necessary data, ensuring a fully functional application.
 
-  
+**Polished UI:** The user interface is thoughtfully designed, adhering to best practices in user experience. It ensures an intuitive and visually appealing interaction for users.
+
+**Responsiveness:** The application is responsive, adapting seamlessly to various screen sizes and devices, providing an optimal user experience.
+![screenshot of mobile](./public/image/Mobile%20View.png)
+
+**Interactivity:** API Adventures engages users by accepting and responding to their inputs. It fosters dynamic interactions to enhance user engagement.
+
+**MVC Folder Structure:** Following the MVC paradigm, the project maintains a well-organized folder structure. Models, views, and controllers are distinct and logically organized, promoting code maintainability.
+
+**Authentication with Express-Session and Cookies:** User authentication is a priority, implemented using Express-session and cookies. This ensures secure access to user-specific data and actions.
+![code snippet]()
+
+**Environment Variable Security:** API keys and sensitive information are protected using environment variables, adding an extra layer of security to the application.
+![code snippet]()
+
+**Clean Repository:** The project repository adheres to quality coding standards. It demonstrates consistency in file structure, naming conventions, and follows best practices for class and ID naming, indentation, and includes high-quality comments for code documentation.
+
+ **Random Photo Search Technology:** This application utilizes the Unsplash API to get a random photo and sets it as a Project or Resource category profile image.  The Unsplash API allows us to filter the searches and retrieve a random photo for the user and a search a topic related photo for the resource category.
+ 
     const url = `https://api.unsplash.com/photos/random?query=${category_id}&orientation=squarish&client_id=${api_Key}`;
 
     try {
@@ -150,17 +187,17 @@
 
  ## Authors:
 
- Anna Rose
+ Anna Rose Benedetti
 
- - [Portfolio](#)
- - [LinkedIn](#)
- - [GitHub](#)
+ - [Portfolio](https://abenedetti27.github.io/Portfolio/)
+ - [LinkedIn](https://www.linkedin.com/in/anna-rose-benedetti/)
+ - [GitHub](https://github.com/abenedetti27)
 
  Armando Arujo
 
- - [Portfolio](#)
- - [LinkedIn](#)
- - [GitHub](#)
+ - [Portfolio](https://armand57araujo.github.io/Portfolio/)
+ - [LinkedIn](https://www.linkedin.com/in/armand-araujo-a82ba2291/)
+ - [GitHub](https://armand57araujo.github.io/Portfolio/)
 
  Thai Nghiem
 

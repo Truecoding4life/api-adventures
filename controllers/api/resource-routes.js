@@ -40,31 +40,8 @@ router.post('/search', async (req, res) => {
   }
 });
 
-// Get One Resource 
 
-router.get("/resource/:id", async (req, res) => {
-  try {
-    if (req.session.loggedIn) {
-      const resourceData = await Resource.findByPk(req.params.id, {
-        include: [{model: User,
-          // include: [{model: Comment,}],
-          },
-        ],
-      });
-      if (resourceData) {
-        const resource = resourceData.get({ plain: true });
-        console.log(resource);
-        res
-          .status(200)
-          .render("updateDelete", { resource: resource, loggedIn: req.session.loggedIn });
-      } else {
-        res.status(404).render("dashboard");
-      }
-    }
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+
 
 
 // Route to make a comment for a single resource
