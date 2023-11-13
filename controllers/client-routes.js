@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
        const dbCategoryData = await Category.findAll({
     });
     const categories = dbCategoryData.map((category) => category.get({ plain: true }));
-    res.render("categorypage", {
+    res.render("homepage", {
       categories,
       loggedIn: req.session.loggedIn,
     });
@@ -29,7 +29,9 @@ router.get("/dashboard", async (req, res) => {
      const dbcategoryData = await Resource.findAll({
       where: {
         user_id: req.session.user_id
-      },});
+      },
+      include: {model: Category, attributes: ['category_name']}
+    });
     const resources = dbcategoryData.map((category) => category.get({ plain: true }));
     res.render("dashboard", {
       resources,
