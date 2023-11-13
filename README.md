@@ -40,7 +40,7 @@
 
 ## Installation:
   
-* To install all dependences, run: npm install
+* To install all dependencies, run: npm install
 * Create the database in MYSQL using the schema.sql.
 * To load the seeds into the database, run: npm run seed 
 * To start the server, run: node server.js
@@ -150,11 +150,11 @@
 
  ## Authors:
 
- Anna Rose
+ Anna Rose Benedetti
 
- - [Portfolio](#)
- - [LinkedIn](#)
- - [GitHub](#)
+ - [Portfolio](https://abenedetti27.github.io/Portfolio/)
+ - [LinkedIn](https://www.linkedin.com/in/anna-rose-benedetti/)
+ - [GitHub](https://github.com/abenedetti27)
 
  Armando Arujo
 
