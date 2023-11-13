@@ -84,30 +84,28 @@ router.post("/:id", async (req, res) => {
 });
 
 // resource update route, tested and working
-router.put("/:id", (req, res) => {
-  Resource.update(
-    {
-      title: req.params.title,
-      description: req.params.description,
-      image_url: req.params.image_url,
-      user_id: req.session.user_id,
-      category_id: req.params.category_id,
-    },
-    {
-      where: {
-        id: req.params.resource_id,
+router.put("/:id", async (req, res) => {
+  try {
+    const updatedResource = await Resource.update(
+      {
+        title: req.body.title,
+        description: req.body.description,
+        image_url: req.body.image_url,
+        user_id: req.session.user_id,
+        category_id: req.body.category_id,
       },
-    }
-  )
-    .then((updatedResource) => {
-      res.json(updatedResource);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.json(err);
-    });
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+    res.json(updatedResource);
+  } catch (err) {
+    console.log(err);
+    res.json(err);
+  }
 });
-
 // resource delete route, tested and working
 router.delete("/:id", async (req, res) => {
   try {
