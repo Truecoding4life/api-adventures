@@ -25,9 +25,6 @@
  ## Description:
 API Adventures is an API index by category, for developers, with the ability to save API resources to a user dashboard, create new API resources and add to the index. It is a full-stack web application built using Node.js, Express.js, and MySQL, following the MVC paradigm to ensure a structured and maintainable codebase. It offers a secure and interactive platform with RESTful API endpoints for data retrieval and addition. The application employs Handlebars.js as the templating engine for dynamic content rendering.
 
-
-
-
  ## Table of Contents:
   
    * [Installation](#installation)
@@ -51,7 +48,7 @@ API Adventures is an API index by category, for developers, with the ability to 
 
 **Home Page**
 
-The homepage provides users with a streamlined experience to enter the APi index within the site.
+The homepage provides users with a streamlined experience to enter the API index within the site.
 
 ![Screenshot of home page](./public/image/Screenshot-GetStarted.png)
 
@@ -70,7 +67,7 @@ Existing users have the ability to log in and new users have the ability to sign
 
 The resource index provides users with an at-a-glance view of all of the resource categories. Each API resource is assigned a category to correspond with it's use-case. 
 
-![Screenshot of resource index](./public/image/Resources.png)
+![Screenshot of resource index](./public/image/API%20Index.png)
 
 ---
 
@@ -86,14 +83,16 @@ Each user has a dashboard, which can be accessed after logging in.
 
 Resources can be added to a user's dashboard by creating a resource.
 
-![Screenshot of create resource form](./public/image/Your%20Resources.png)
+![Screenshot of create resource form](./public/image/Resources.png)
 
 
 ---
 
 **Create Project**
 
-![Screenshot of create project form]()
+Projects can be created and added to a user's dashboard by creating a project.
+
+![Screenshot of create project form](./public/image/Projects.png)
 
 
 ---
@@ -184,7 +183,7 @@ req.session.save(() => {
 **Clean Repository:** The project repository adheres to quality coding standards. It demonstrates consistency in file structure, naming conventions, and follows best practices for class and ID naming, indentation, and includes high-quality comments for code documentation.
 
  **Random Photo Search Technology:** This application utilizes the Unsplash API to get a random photo and sets it as a Project or Resource category profile image.  The Unsplash API allows us to filter the searches and retrieve a random photo for the user and a search a topic related photo for the resource category.
- 
+ ```
     const url = `https://api.unsplash.com/photos/random?query=${category_id}&orientation=squarish&client_id=${api_Key}`;
 
     try {
@@ -203,10 +202,21 @@ req.session.save(() => {
     console.error("Error fetching photo from Unsplash:", error);
     alert("Failed to fetch photo from Unsplash");
    }
-
+```
 ---
 
 ## Learning Points:
+1. Handlebars.js: Gain proficiency in using Handlebars.js as a templating engine for dynamic content rendering. Understand its syntax and how it integrates with Node.js and Express.js.
+
+2. MVC Paradigm: Implement the MVC (Model-View-Controller) paradigm to organize code efficiently, separating concerns and promoting maintainability.
+
+3. Authentication: Implement user authentication using express-session and cookies to secure access to user-specific data and actions.
+
+4. Deployment on Heroku: Understand the process of deploying a Node.js application on Heroku, including configuring environment variables and ensuring the deployment includes necessary data for a fully functional application.
+
+5. Environment Variable Security: Learn to protect sensitive information, such as API keys, by using environment variables, adding an extra layer of security to the application.
+
+6. Testing with Insomnia: Use tools like Insomnia for testing frontend and backend routes, ensuring proper functionality and identifying potential issues.
 
 ## License:
 
@@ -239,11 +249,7 @@ req.session.save(() => {
  This application tested the the front end and backend routes using Insomnia Core application
 
   ![Screenshot of Insomnia Routes Test](./public/image/Screenshot%20Insomnia%20Testing.png)
-
- ## Contributing:
-
  
-
  ## Authors:
 
  Anna Rose Benedetti
