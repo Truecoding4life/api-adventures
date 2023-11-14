@@ -1,5 +1,6 @@
 const resourceId = window.location.pathname.split("/").pop();
 
+
 document.querySelector("#update").addEventListener("click", (event) => {
   event.preventDefault();
   const editResource = {
@@ -26,6 +27,7 @@ document.querySelector("#update").addEventListener("click", (event) => {
 });
 
 document.querySelector("#delete").addEventListener("click", (event) => {
+  const resourceId = window.location.pathname.split("/").pop();
   event.preventDefault();
   // const postId = document.querySelector("#hiddenPostId").value;
   fetch(`/api/resource/${resourceId}`, {
