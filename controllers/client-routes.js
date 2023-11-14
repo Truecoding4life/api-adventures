@@ -39,7 +39,6 @@ router.get("/dashboard", async (req, res) => {
         resources,
         loggedIn: req.session.loggedIn,
         user_id: req.session.user_id,
-        
       });
     } else {
       res.status(200).render("login");
@@ -102,7 +101,7 @@ router.get("/project/:id", async (req, res) => {
 router.get("/project", async (req, res) => {
   try {
     const projectData = await Project.findAll({
-      where: { user_id: req.session.user_id }
+      where: { user_id: req.session.user_id },
     });
     const projects = projectData.map((project) => project.get({ plain: true }));
     res.render("project", { projects, loggedIn: req.session.loggedIn });
@@ -133,19 +132,16 @@ router.get("/resource/:id", async (req, res) => {
         include: [
           {
             model: User,
-            // include: [{model: Comment,}],
           },
         ],
       });
       if (resourceData) {
         const resource = resourceData.get({ plain: true });
         console.log(resource);
-        res
-          .status(200)
-          .render("one-resource-detail", {
-            resource: resource,
-            loggedIn: req.session.loggedIn,
-          });
+        res.status(200).render("one-resource-detail", {
+          resource: resource,
+          loggedIn: req.session.loggedIn,
+        });
       } else {
         res.status(404).render("dashboard");
       }

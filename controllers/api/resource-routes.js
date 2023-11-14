@@ -17,6 +17,7 @@ router.post("/", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 // Route to resources by Category, needs testing
 router.post('/search', async (req, res) => {
   const { categoryId } = req.query;
@@ -83,6 +84,7 @@ router.put("/:id", async (req, res) => {
     res.json(err);
   }
 });
+
 // resource delete route, tested and working
 router.delete("/:id", async (req, res) => {
   try {

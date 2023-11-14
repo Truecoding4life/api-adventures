@@ -1,10 +1,16 @@
 # API-Adventures ![GitHub License Badge](https://img.shields.io/badge/License-MIT-yellow)
 
-[Link to deployed site](https://frozen-mesa-56300-52dd9f520f9a.herokuapp.com/)
+
+#### Resources:
+
+[Link to live site](https://frozen-mesa-56300-52dd9f520f9a.herokuapp.com/)
 
 ![api-Adventures](./public/image/Screenshot-GetStarted.png)
 
-## Technology Used:
+
+
+
+#### Technology Used:
 
  * HTML - https://developer.mozilla.org/en-US/docs/Web/HTML
  * CSS - https://developer.mozilla.org/en-US/docs/Web/CSS
@@ -22,29 +28,56 @@
  * MVC - https://developer.mozilla.org/en-US/docs/Glossary/MVC
  * Unsplash API - https://unsplash.com/developers
 
- ## Description:
+
+
+
+-----
+
+
+
+
+ #### Description:
 API Adventures is an API index by category, for developers, with the ability to save API resources to a user dashboard, create new API resources and add to the index. It is a full-stack web application built using Node.js, Express.js, and MySQL, following the MVC paradigm to ensure a structured and maintainable codebase. It offers a secure and interactive platform with RESTful API endpoints for data retrieval and addition. The application employs Handlebars.js as the templating engine for dynamic content rendering.
 
- ## Table of Contents:
-  
-   * [Installation](#installation)
-   * [Usage](#usage)
-   * [Highlighted Features](#highlighted-features)
-   * [Learning Points](#learning-points)
-   * [License](#license)
-   * [Badges](#badges)
-   * [Tests](#tests)
-   * [Contributing](#contributing)
-   * [Authors](#authors)
 
-## Installation:
+
+----
+
+
+
+#### Table of Contents:
+  
+ * [Installation](#installation)
+ * [Usage](#usage)
+ * [Highlighted Features](#highlighted-features)
+ * [Learning Points](#learning-points)
+ * [License](#license)
+ * [Badges](#badges)
+ * [Tests](#tests)
+ * [Contributing](#contributing)
+ * [Authors](#authors)
+
+
+---
+
+
+
+
+#### Installation:
   
 * To install all dependencies, run: npm install
 * Create the database in MYSQL using the schema.sql.
 * To load the seeds into the database, run: npm run seed 
 * To start the server, run: node server.js
 
-## Usage:
+
+
+----
+
+
+
+
+### Usage
 
 **Home Page**
 
@@ -52,16 +85,38 @@ The homepage provides users with a streamlined experience to enter the API index
 
 ![Screenshot of home page](./public/image/Screenshot-GetStarted.png)
 
+
+
+
+
+
+
 ---
+
+
+
+
+
 
 **Login/Sign Up**
 
 Existing users have the ability to log in and new users have the ability to sign up. 
 
-![Screenshot of Login/Signup form](./public/image/login:signup.png)
+![Screenshot of Login/Signup form](./public/image/login.gif)
+
+
+
+
+
 
 
 ---
+
+
+
+
+
+
 
 **Resource Index**
 
@@ -83,7 +138,7 @@ Each user has a dashboard, which can be accessed after logging in.
 
 Resources can be added to a user's dashboard by creating a resource.
 
-![Screenshot of create resource form](./public/image/Resources.png)
+![Screenshot of create resource form](./public/image/new%20reso.gif)
 
 
 ---
