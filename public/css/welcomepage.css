@@ -1,9 +1,12 @@
 body {
     background-image: url("../../image/sl_031420_28950_10.jpg");
+    background-size: cover;
+    min-height: 2000px;
+
 }
 
 #main {
-    margin-top: 600px;
+    margin-top: 200px;
 }
 #logo {
     font-size: 100px;
