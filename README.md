@@ -9,7 +9,7 @@
 
 
 
-#### Technology Used:
+### Technology Used:
 
  * HTML - https://developer.mozilla.org/en-US/docs/Web/HTML
  * CSS - https://developer.mozilla.org/en-US/docs/Web/CSS
@@ -35,7 +35,7 @@
 
 
 
- #### Description:
+ ### Description:
 API Adventures is an API index by category, for developers, with the ability to save API resources to a user dashboard, create new API resources and add to the index. It is a full-stack web application built using Node.js, Express.js, and MySQL, following the MVC paradigm to ensure a structured and maintainable codebase. It offers a secure and interactive platform with RESTful API endpoints for data retrieval and addition. The application employs Handlebars.js as the templating engine for dynamic content rendering.
 
 
@@ -44,7 +44,7 @@ API Adventures is an API index by category, for developers, with the ability to 
 
 
 
-#### Table of Contents:
+### Table of Contents:
   
  * [Installation](#installation)
  * [Usage](#usage)
@@ -149,9 +149,19 @@ Projects can be created and added to a user's dashboard by creating a project.
 ![Screenshot of create project form](./public/image/Projects.png)
 
 
+
+
+
+
 ---
 
-### Highlighted Features:
+
+
+
+
+
+
+## Highlighted Features:
 
 **RESTful API:** Utilizing Node.js and Express.js, the application provides both GET and POST routes to facilitate seamless interaction with the database.
 
@@ -193,6 +203,9 @@ Projects can be created and added to a user's dashboard by creating a project.
 
 ---
 
+
+
+
 ## Learning Points:
 1. Handlebars.js: Gain proficiency in using Handlebars.js as a templating engine for dynamic content rendering. Understand its syntax and how it integrates with Node.js and Express.js.
 
@@ -228,7 +241,7 @@ Projects can be created and added to a user's dashboard by creating a project.
 
 #### License:
 
- This project is licensed with MIT license
+ This project is licensed with an MIT license
 
  Link to License - [Website to MIT License]((https://opensource.org/license/mit))
 
@@ -268,11 +281,35 @@ Projects can be created and added to a user's dashboard by creating a project.
 
  ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
- ## Tests:
+
+
+
+
+----
+
+
+
+
+
+
+
+ ### Tests:
  
- This application tested the the front end and backend routes using Insomnia Core application
+ This application tested the front end and backend routes using the Insomnia Core application
 
   ![Screenshot of Insomnia Routes Test](./public/image/Screenshot%20Insomnia%20Testing.png)
+
+
+
+
+
+
+
+------
+
+
+
+
  
  ## Authors:
 
