@@ -1,6 +1,7 @@
+const resourceId = window.location.pathname.split("/").pop();
+
 document.querySelector("#update").addEventListener("click", (event) => {
   event.preventDefault();
-  // const postId = document.querySelector("#hiddenPostId").value;
   const editResource = {
     title: document.querySelector("#editedTitle").value,
     description: document.querySelector("#editedContent").value,
@@ -27,7 +28,7 @@ document.querySelector("#update").addEventListener("click", (event) => {
 document.querySelector("#delete").addEventListener("click", (event) => {
   event.preventDefault();
   // const postId = document.querySelector("#hiddenPostId").value;
-  fetch(`/api/resouce/${resourceId}`, {
+  fetch(`/api/resource/${resourceId}`, {
     method: "DELETE",
   }).then((res) => {
     if (res.ok) {

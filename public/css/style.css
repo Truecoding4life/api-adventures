@@ -1,9 +1,22 @@
 a {
     font-family: 'Roboto', sans-serif;
 }
+
 body {
-    font-family: 'Roboto', sans-serif;
+
+    background-color: #000;
+    color: #fff;
+    font-size: 18px;
+    flex-wrap: wrap;
+    background-image: url("../image/datamove1.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Gruppo', sans-serif;
+
 }
+
+
 header {
     background-color: rgb(61, 140, 96);
     padding: 50px;
@@ -11,26 +24,32 @@ header {
     border-radius: 20px;
     margin-bottom: 12px;
 }
+
 .col-5 {
     background-color: rgba(74, 76, 76, 0.359);
     padding: 50px;
     border-radius: 20px;
 }
+
 nav {
-    background-color: rgba(32, 75, 87, 0.883);
+    background-color: rgba(0, 0, 0, 0.883);
 }
+
 nav a {
     color: white;
     font-size: 24px;
 }
-.nav-link{
+
+.nav-link {
     margin-left: 40px;
 
 }
+
 .nav-item a {
     color: rgba(217, 202, 202, 0.363);
     font-size: 24px;
 }
+
 .nav-item a:hover {
     color: rgba(81, 170, 190, 0.853);
 }
