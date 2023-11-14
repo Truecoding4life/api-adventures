@@ -61,7 +61,7 @@ The homepage provides users with a streamlined experience to enter the APi index
 
 Existing users have the ability to log in and new users have the ability to sign up. 
 
-![Screenshot of Login/Signup form](./public/image/Login:Signup%20Page.png)
+![Screenshot of Login/Signup form](./public/image/login:signup.png)
 
 
 ---
