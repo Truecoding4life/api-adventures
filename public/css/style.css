@@ -68,3 +68,7 @@ nav a {
     background-color: rgba(60, 60, 60, 0.812);
     border-radius: 30px;
 }
+
+.card-text, .card-title, .card-header {
+    color: black;
+}
