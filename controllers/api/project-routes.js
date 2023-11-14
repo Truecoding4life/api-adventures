@@ -8,8 +8,8 @@ router.post("/", async (req, res) => {
       title: req.body.title,
       description: req.body.description,
       deployed_url: req.body.deployed_url,
-      repo_url: req.session.repo_url,
-      user_id: req.body.user_id,
+      repo_url: req.body.repo_url,
+      user_id: req.session.user_id,
     });
     res.status(201).json("You created a new project!");
   } catch (err) {

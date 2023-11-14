@@ -101,7 +101,11 @@ router.get("/project/:id", async (req, res) => {
 // Project route
 router.get("/project", async (req, res) => {
   try {
-    res.render("project", { Project, loggedIn: req.session.loggedIn });
+    const projectData = await Project.findAll({
+      where: { user_id: req.session.user_id }
+    });
+    const projects = projectData.map((project) => project.get({ plain: true }));
+    res.render("project", { projects, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
