@@ -5,7 +5,6 @@
 
 [Link to live site](https://frozen-mesa-56300-52dd9f520f9a.herokuapp.com/)
 
-![api-Adventures](./public/image/Screenshot-GetStarted.png)
 
 
 
@@ -17,7 +16,7 @@
  * JavaScript -  https://developer.mozilla.org/en-US/docs/Web/JavaScript 
  * BootStrap - https://getbootstrap.com
  * npm - https://www.npmjs.com/
- * mysql2 - https://www.npmjs.com/package/mysql2
+ * mysql2 - https://www.npmjs.com/package/mysql2resource
  * sequelize - https://sequelize.org/
  * express - https://expressjs.com/
  * express-handlebar - https://www.npmjs.com/package/express-handlebars
@@ -122,7 +121,7 @@ Existing users have the ability to log in and new users have the ability to sign
 
 The resource index provides users with an at-a-glance view of all of the resource categories. Each API resource is assigned a category to correspond with it's use-case. 
 
-![Screenshot of resource index](./public/image/API%20Index.png)
+![Screenshot of resource index](./public/image/rsources.gif)
 
 ---
 
@@ -155,31 +154,9 @@ Projects can be created and added to a user's dashboard by creating a project.
 ### Highlighted Features:
 
 **RESTful API:** Utilizing Node.js and Express.js, the application provides both GET and POST routes to facilitate seamless interaction with the database.
-```
-router.get("/resource/:id", async (req, res) => {
-  try {
-    if (req.session.loggedIn) {
-      const resourceData = await Resource.findByPk(req.params.id, {
-        include: [{model: User,
-          // include: [{model: Comment,}],
-          },
-        ],
-      });
-      if (resourceData) {
-        const resource = resourceData.get({ plain: true });
-        console.log(resource);
-        res
-          .status(200)
-          .render("updateDelete", { resource: resource, loggedIn: req.session.loggedIn });
-      } else {
-        res.status(404).render("dashboard");
-      }
-    }
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-```
+
+
+![Resources by category](./public/image/resourcebycate.png)
 
 **Database Integration:** MySQL is employed as the relational database, and Sequelize ORM streamlines data management, ensuring efficient and organized storage.
 
@@ -188,7 +165,7 @@ router.get("/resource/:id", async (req, res) => {
 **Polished UI:** The user interface is thoughtfully designed, adhering to best practices in user experience. It ensures an intuitive and visually appealing interaction for users.
 
 **Responsiveness:** The application is responsive, adapting seamlessly to various screen sizes and devices, providing an optimal user experience.
-![screenshot of mobile](./public/image/Mobile%20View.png)
+![screenshot of mobile](./public/image/bt1..gif)
 
 **Interactivity:** API Adventures engages users by accepting and responding to their inputs. It fosters dynamic interactions to enhance user engagement.
 
@@ -196,68 +173,24 @@ router.get("/resource/:id", async (req, res) => {
 
 **Authentication with Express-Session and Cookies:** User authentication is a priority, implemented using Express-session and cookies. This ensures secure access to user-specific data and actions.
 
-```
-const sess = {
-  secret: 'Super secret secret',
- 
-  cookie: {
-   
-    maxAge: 3600000, //1hr
-  },
-  resave: false,
- 
-  saveUninitialized: true,
- 
-  store: new SequelizeStore({
-    db: sequelize,
-  }),
-}
-  ```
+![screenshot of sess](./public/image/sess.png)
 
 **Environment Variable Security:** API keys and sensitive information are protected using environment variables, adding an extra layer of security to the application.
-```
-req.session.save(() => {
-      req.session.loggedIn = true;
-      req.session.user_id = dbUserData.id;
-      console.log(
-        '🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie',
-        req.session.cookie
-      );
 
-      res
-        .status(200)
-        .json({ user: dbUserData, message: 'You are now logged in!' });
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
-```
+
+![screenshot of sess](./public/image/set%20sess.png)
+
 
 **Clean Repository:** The project repository adheres to quality coding standards. It demonstrates consistency in file structure, naming conventions, and follows best practices for class and ID naming, indentation, and includes high-quality comments for code documentation.
 
  **Random Photo Search Technology:** This application utilizes the Unsplash API to get a random photo and sets it as a Project or Resource category profile image.  The Unsplash API allows us to filter the searches and retrieve a random photo for the user and a search a topic related photo for the resource category.
- ```
-    const url = `https://api.unsplash.com/photos/random?query=${category_id}&orientation=squarish&client_id=${api_Key}`;
 
-    try {
-    const unsplashResponse = await fetch(url);
-    const unsplashData = await unsplashResponse.json();
-    const image_url = unsplashData.urls.small;
 
-    const response = await fetch(`/api/resource`, {
-      method: "POST",
-      body: JSON.stringify({image_url,}),
-      headers: {
-        "Content-Type": "application/json",
-      }
-    })
-   } catch (error) {
-    console.error("Error fetching photo from Unsplash:", error);
-    alert("Failed to fetch photo from Unsplash");
-   }
-```
+
+![gif of API unsplash](./public/image/unsplash.png)
+
+
+
 ---
 
 ## Learning Points:
@@ -273,13 +206,49 @@ req.session.save(() => {
 
 6. Testing with Insomnia: Use tools like Insomnia for testing frontend and backend routes, ensuring proper functionality and identifying potential issues.
 
-## License:
+
+
+
+
+
+
+
+
+
+----
+
+
+
+
+
+
+
+
+
+
+#### License:
 
  This project is licensed with MIT license
 
  Link to License - [Website to MIT License]((https://opensource.org/license/mit))
 
- ## Badges:
+
+
+
+
+
+
+
+-----
+
+
+
+
+
+
+
+
+#### Badges:
 
  ![GitHub License Badge](https://img.shields.io/badge/License-MIT-yellow)
 
@@ -321,7 +290,7 @@ req.session.save(() => {
 
  Thai Nghiem
 
- - [Portfolio](#)
+ - [Portfolio](https://truecoding4life.github.io/Jaystudio/)
  - [LinkedIn](https://www.linkedin.com/in/thai-nghiem-319292267/)
  - [GitHub](https://github.com/Truecoding4life)
 
