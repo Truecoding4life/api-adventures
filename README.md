@@ -1,6 +1,6 @@
 # API-Adventures ![GitHub License Badge](https://img.shields.io/badge/License-MIT-yellow)
 
-[Link to deployed site](#)
+[Link to deployed site](https://frozen-mesa-56300-52dd9f520f9a.herokuapp.com/)
 
 ![api-Adventures](./public/image/Screenshot-GetStarted.png)
 
@@ -53,7 +53,7 @@ API Adventures is an API index by category, for developers, with the ability to 
 
 The homepage provides users with a streamlined experience to enter the APi index within the site.
 
-![Screenshot of home page](< get started page>)
+![Screenshot of home page](./public/image/Screenshot-GetStarted.png)
 
 ---
 
@@ -61,7 +61,7 @@ The homepage provides users with a streamlined experience to enter the APi index
 
 Existing users have the ability to log in and new users have the ability to sign up. 
 
-![Screenshot of Login/Signup form](./public/image/Login:Signup%20Page.png)
+![Screenshot of Login/Signup form](./public/image/login:signup.png)
 
 
 ---
@@ -101,7 +101,31 @@ Resources can be added to a user's dashboard by creating a resource.
 ### Highlighted Features:
 
 **RESTful API:** Utilizing Node.js and Express.js, the application provides both GET and POST routes to facilitate seamless interaction with the database.
-![code snippet]()
+```
+router.get("/resource/:id", async (req, res) => {
+  try {
+    if (req.session.loggedIn) {
+      const resourceData = await Resource.findByPk(req.params.id, {
+        include: [{model: User,
+          // include: [{model: Comment,}],
+          },
+        ],
+      });
+      if (resourceData) {
+        const resource = resourceData.get({ plain: true });
+        console.log(resource);
+        res
+          .status(200)
+          .render("updateDelete", { resource: resource, loggedIn: req.session.loggedIn });
+      } else {
+        res.status(404).render("dashboard");
+      }
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+```
 
 **Database Integration:** MySQL is employed as the relational database, and Sequelize ORM streamlines data management, ensuring efficient and organized storage.
 
@@ -117,10 +141,45 @@ Resources can be added to a user's dashboard by creating a resource.
 **MVC Folder Structure:** Following the MVC paradigm, the project maintains a well-organized folder structure. Models, views, and controllers are distinct and logically organized, promoting code maintainability.
 
 **Authentication with Express-Session and Cookies:** User authentication is a priority, implemented using Express-session and cookies. This ensures secure access to user-specific data and actions.
-![code snippet]()
+
+```
+const sess = {
+  secret: 'Super secret secret',
+ 
+  cookie: {
+   
+    maxAge: 3600000, //1hr
+  },
+  resave: false,
+ 
+  saveUninitialized: true,
+ 
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+}
+  ```
 
 **Environment Variable Security:** API keys and sensitive information are protected using environment variables, adding an extra layer of security to the application.
-![code snippet]()
+```
+req.session.save(() => {
+      req.session.loggedIn = true;
+      req.session.user_id = dbUserData.id;
+      console.log(
+        '🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie',
+        req.session.cookie
+      );
+
+      res
+        .status(200)
+        .json({ user: dbUserData, message: 'You are now logged in!' });
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+```
 
 **Clean Repository:** The project repository adheres to quality coding standards. It demonstrates consistency in file structure, naming conventions, and follows best practices for class and ID naming, indentation, and includes high-quality comments for code documentation.
 
