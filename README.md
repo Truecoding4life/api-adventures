@@ -38,6 +38,17 @@
  #### Description:
 API Adventures is an API index by category, for developers, with the ability to save API resources to a user dashboard, create new API resources and add to the index. It is a full-stack web application built using Node.js, Express.js, and MySQL, following the MVC paradigm to ensure a structured and maintainable codebase. It offers a secure and interactive platform with RESTful API endpoints for data retrieval and addition. The application employs Handlebars.js as the templating engine for dynamic content rendering.
 
+#### User Stories:
+1. As a User, I want to Get Started, so that I can login or sign up.
+
+2. As a User, I want to log in with a secured account using my email
+3. As a User, I want to see API resource posts by category , so that I can use api for my webpage
+4. As a User, I want to create a resource post, so that I can share about the insight of this new api.
+5. As a User, I want to create a project post, so that I can share a project utilizing a new api.
+
+6.  As a User, I want to view all my resource post on my dashboard, so that I remember what I posted.
+7. As a User, I want to click on a resource on homepage, so that I can see details of the post.
+8. As a User, I want to update /delete/archive my resource post, so that I can modify my resource post.
 
 
 ----
