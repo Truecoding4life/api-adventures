@@ -72,3 +72,13 @@ nav a {
 .card-text, .card-title, .card-header {
     color: black;
 }
+
+@media screen and (max-width: 600px) {
+    #signUp {
+        padding-top: 200px;
+    }
+    #loginBox{
+        padding-top: 100px;
+    }
+    
+}
