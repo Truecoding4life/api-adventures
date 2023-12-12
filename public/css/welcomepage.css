@@ -10,4 +10,15 @@ body {
 }
 #logo {
     font-size: 100px;
+    font-family: 'Shizuru', sans-serif;
+}
+
+@media screen and (max-width: 800px) {
+    #main {
+        margin-top: 70px;
+    }
+    #logo {
+        font-size: 50px;
+    }
+    
 }

@@ -3,7 +3,6 @@
 } */
 
 body {
-
     background-color: #000;
     color: #fff;
     font-size: 18px;
@@ -39,8 +38,13 @@ nav {
 
 }
 
+#navbrand{
+    font-size: 40px;
+}
+
+
 .navbar-brand {
-    font-family: 'Rubik Pixels', sans-serif;
+    font-family: 'Shizuru', sans-serif;
 
 }
 
@@ -79,6 +83,10 @@ nav a {
     }
     #loginBox{
         padding-top: 100px;
+    }
+
+    #navbrand{
+        font-size: 20px;
     }
     
 }
