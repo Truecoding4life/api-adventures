@@ -1,0 +1,21 @@
+.post-dashboard{
+    background-color: rgba(24, 32, 55, 0.825);
+    border-radius: 20px;
+}
+
+
+
+.post-image{
+    border-radius: 200px;
+    width: 100px
+}
+
+.post-button{
+    color: #ebe5e5;
+}
+
+.post-button:hover{
+    color: #ebe5e5;
+    background-color: #093158;
+    transition: .6s;
+}

@@ -1,11 +1,10 @@
-        <div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-4">
-          <div class="card">
-            <h5 class="card-header">{{category_name}}</h5>
-            <img
-              src="{{image_url}}"
-              class="card-img-top" alt="...">
-            <div class="card-body">
-              <a href="/category/{{id}}" class="btn btn-dark">View more </a>
-            </div>
-          </div>
-        </div>
+<div class="col-12 col-sm-6 col-md-4 col-xl-3 mb-4" >
+  <div class="card category-card">
+    <div class="text-center" >
+      <h2 class="text-center category-name">
+        {{category_name}}
+      </h2>
+      <a href="/category/{{id}}" class="category-button">View more </a>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 body {
-    background-image: url("../../image/sl_031420_28950_10.jpg");
+    background-image: url("../image/datamove1.gif");
     background-size: cover;
     min-height: 2000px;
 
@@ -10,4 +10,21 @@ body {
 }
 #logo {
     font-size: 100px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: rgba(213, 213, 217, 0.778);
+}
+
+#getStart{
+    background-color: rgba(0, 0, 0, 0.754);
+    color: white;
+    padding: 13px;
+    border-radius: 30px;
+    font-family: Poppins;
+    transform: scale(1.1);
+}
+
+#getStart:hover{
+    transform: scale(1.2);
+    transition: .6s;
 }
