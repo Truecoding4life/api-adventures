@@ -3,8 +3,9 @@
 } */
 
 body {
-
     background-color: #070d17;
+
+  
     color: #fff;
     font-size: 18px;
     flex-wrap: wrap;
@@ -79,11 +80,14 @@ nav {
 
 }
 
-.navbar-brand {
+#navbrand{
+    font-size: 40px;
     font-family: 'Poppins', sans-serif;
-    color:  #3f5477;
-
+    color: #3f5477;
 }
+
+
+
 
 
 
@@ -210,3 +214,18 @@ nav {
     width: 10;
 }
 
+
+
+@media screen and (max-width: 600px) {
+    #signUp {
+        padding-top: 200px;
+    }
+    #loginBox{
+        padding-top: 100px;
+    }
+
+    #navbrand{
+        font-size: 20px;
+    }
+    
+}

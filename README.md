@@ -3,29 +3,52 @@
 
 #### Resources:
 
-[Link to live site](https://frozen-mesa-56300-52dd9f520f9a.herokuapp.com/)
+[Link to live site](https://api-adventures-cd9e93b14d5e.herokuapp.com)
 
 
 
-
+---
 
 #### Technology Used:
 
- * HTML - https://developer.mozilla.org/en-US/docs/Web/HTML
- * CSS - https://developer.mozilla.org/en-US/docs/Web/CSS
- * JavaScript -  https://developer.mozilla.org/en-US/docs/Web/JavaScript 
- * BootStrap - https://getbootstrap.com
- * npm - https://www.npmjs.com/
- * mysql2 - https://www.npmjs.com/package/mysql2resource
- * sequelize - https://sequelize.org/
- * express - https://expressjs.com/
- * express-handlebar - https://www.npmjs.com/package/express-handlebars
- * express-session - https://www.npmjs.com/package/express-session
- * dotenv - https://www.npmjs.com/package/dotenv
- * handlebars - https://handlebarsjs.com/
- * bcrypt - https://www.npmjs.com/package/bcrypt
- * MVC - https://developer.mozilla.org/en-US/docs/Glossary/MVC
- * Unsplash API - https://unsplash.com/developers
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+[more detail](https://github.com/)
+
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
+[more detail](https://www.heroku.com/platform)
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+[more detail](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
+
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+[more detail](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+[more detail](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+[more detail](https://getbootstrap.com)
+
+
+![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+
+![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
+[more detail](https://www.npmjs.com/)
+
+
+
+ * [mysql2](https://www.npmjs.com/package/mysql2resource)
+ * [sequelize](https://sequelize.org/)
+ * [express](https://expressjs.com/)
+ * [express-handlebar](https://www.npmjs.com/package/express-handlebars)
+ * [express-session](https://www.npmjs.com/package/express-session)
+ * [dotenv](https://www.npmjs.com/package/dotenv)
+ * [handlebars](https://handlebarsjs.com/)
+ * [bcrypt](https://www.npmjs.com/package/bcrypt)
+ * [MVC](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
+ * [Unsplash API](https://unsplash.com/developers)
 
 
 
@@ -259,25 +282,6 @@ Projects can be created and added to a user's dashboard by creating a project.
 
 
 
-#### Badges:
-
- ![GitHub License Badge](https://img.shields.io/badge/License-MIT-yellow)
-
- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
- ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-
- ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
-
- ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-
- ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-
- ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
-
- ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white)
-
- ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
  ## Tests:
  
@@ -301,7 +305,7 @@ Projects can be created and added to a user's dashboard by creating a project.
 
  Thai Nghiem
 
- - [Portfolio](https://truecoding4life.github.io/Jaystudio/)
+ - [Portfolio](https://main--j-studio-rjs.netlify.app/)
  - [LinkedIn](https://www.linkedin.com/in/thai-nghiem-319292267/)
  - [GitHub](https://github.com/Truecoding4life)
 
