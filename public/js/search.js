@@ -9,3 +9,13 @@ $(document).ready(()=> {
         window.location.href = `/category/${value}`
     })
 })
+
+
+// const dateDisplay = $('#date-display');
+// const timeDisplay = $('#time-display');
+// const date = dateDisplay.text().slice(0,16);
+// const time = dateDisplay.text().slice(17,26)
+// console.log(time)
+
+// dateDisplay.html(`Posted: ${date}` )
+// timeDisplay.html(time)

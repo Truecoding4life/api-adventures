@@ -9,9 +9,13 @@ router.get("/", async (req, res) => {
       const categories = dbCategoryData.map((category) =>
         category.get({ plain: true })
       );
+      const dbResourceData = await Resource.findAll({});
+      const resources = dbResourceData.map((resource)=>
+      resource.get({plain:true}));
       res.render("homepage", {
         categories,
         loggedIn: req.session.loggedIn,
+        resources,
       });
     } else {
       res.status(200).render("welcomepage");
@@ -125,6 +129,9 @@ router.get("/login", async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+
+
 router.get("/resource/:id", async (req, res) => {
   try {
     if (req.session.loggedIn) {
@@ -137,7 +144,6 @@ router.get("/resource/:id", async (req, res) => {
       });
       if (resourceData) {
         const resource = resourceData.get({ plain: true });
-        console.log(resource);
         res.status(200).render("one-resource-detail", {
           resource: resource,
           loggedIn: req.session.loggedIn,
@@ -145,6 +151,9 @@ router.get("/resource/:id", async (req, res) => {
       } else {
         res.status(404).render("dashboard");
       }
+    }
+    else{
+      res.status(404).redirect('login')
     }
   } catch (err) {
     res.status(500).json(err);

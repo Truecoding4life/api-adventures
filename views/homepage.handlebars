@@ -9,7 +9,7 @@
             <div class="row">
           <div class="col-11">
                             <select id="searchByCategory" class="form-select custom-input">
-                                <option selected>Select resource category</option>
+                                <option selected>Search by category</option>
                                 <option value="1" id="sports">sports</option>
                                 <option value="2" id="food">food</option>
                                 <option value="3" id="music">music</option>
@@ -28,9 +28,11 @@
           </div>
           
         
-
-        {{#each categories as |category|}}  
-            {{> category}}
+        <div class="col-12">
+          <h3> News Feed </h3>
+        </div>
+        {{#each resources as |resource|}}  
+            {{> homepage-resources}}
 
 
 

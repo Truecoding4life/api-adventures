@@ -1,27 +1,24 @@
 
  <div class="section mt-5">
     <div class="container-fluid">
-      <div class="row no-gutter">
-        <div class="col-0 col-md-1 col-lg-1 col-xl-3"> </div>
-        <div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-2 mb-5 ">
-          <div class="card bg-body-tertiary mb-4 ">
-            <div class="card-header ">
-              <h4>{{resource.title}}</h4>
-            </div>
-            <img src="{{resource.image_url}}"
-              class="card-img-top rounded" alt="none">
-            <div class="card-body">
+      <div class="row ">
+        <div class="col-12">
+          <figure class="text-center">
 
-              <h6 class="card-text">{{resource.description}}.</h6>
-            </div>
+ <img src="{{resource.image_url}}"
+              class="rounded" alt="none">
+
+          </figure>
+
+           
+            
           </div>
         </div>
 
-        <div class="col-0 col-sm-1 col-xl-1"> </div>
 
 
 
-        <div class="col-12 col-sm-5 col-lg-3 col-xl-2">
+        <div class="col-12">
           <form class="row g-3 p-4" id="updateform">
             <div class="form-title text-white mb-4 ">
               <h4><i class="bi bi-pencil-square"></i> Edit Post </h4>

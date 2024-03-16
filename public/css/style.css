@@ -105,13 +105,12 @@ nav a {
 }
 
 #updateform {
-    background-color: rgba(60, 60, 60, 0.896);
+    background-color: rgba(15, 14, 14, 0.917);
     border-radius: 30px;
+    max-width: 600px;
 }
 
-.card-text, .card-title, .card-header {
-    color: black;
-}
+
 
 .category-card{
     background-color: rgba(16, 73, 127, 0.797);
@@ -162,4 +161,36 @@ nav a {
     border-radius: 30px;
     color: white;
     transition: .6s;
+}
+
+.result-card-image{
+    width: 180px;
+    border-radius: 200px;
+    padding: 20px;
+}
+
+.result-card{
+    background-color: rgba(23, 36, 61, 0.75);
+    border-radius: 30px;
+    padding: 20px;
+    margin: 20px;
+    color: rgb(232, 226, 226);
+    font-family: Poppins;
+}
+
+.create-resource-button{
+    background-color: rgba(32, 178, 117, 0.656);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Poppins;
+}
+
+.create-resource-button:hover{
+    background-color: rgba(74, 184, 131, 0.966);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Poppins;
+    transition: .4s;
 }
