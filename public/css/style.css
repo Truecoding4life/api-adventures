@@ -150,3 +150,16 @@ nav a {
     color: rgb(49, 105, 168);
    
 }
+
+.search-button{
+    background-color: rgba(15, 82, 127, 0.379);
+    border-radius: 30px;
+    color: white;
+}
+
+.search-button:hover{
+    background-color: rgba(15, 122, 193, 0.596);
+    border-radius: 30px;
+    color: white;
+    transition: .6s;
+}

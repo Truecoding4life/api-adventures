@@ -1,13 +1,14 @@
 .post-dashboard{
-    background-color: rgba(24, 32, 55, 0.825);
+    background-color: rgba(29, 43, 67, 0.527);
     border-radius: 20px;
+    font-family: Nunito Sans, sans-serif;
 }
 
 
 
 .post-image{
     border-radius: 200px;
-    width: 100px
+    width: 120px
 }
 
 .post-button{
