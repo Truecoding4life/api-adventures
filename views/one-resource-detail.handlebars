@@ -1,32 +1,33 @@
 
  <div class="section mt-5">
     <div class="container-fluid">
-      <div class="row ">
+      <div class="row align-items-center post-detail">
         <div class="col-12">
-          <figure class="text-center">
-
- <img src="{{resource.image_url}}"
-              class="rounded" alt="none">
-
-          </figure>
-
-           
-            
-          </div>
+          <h2 class="header"> Post Details</h2>
         </div>
+        <div class="col-4 col-sm-3 col-lg-2">
+          <figure class="text-center post-detail-image">
+            <img class=" post-detail-image"  src="{{resource.image_url}}"  alt="post-detail-picture">
+          </figure>  
+          </div>
+      
+        <div class="col-8 col-sm-9">
+          <div class="post-description">
+          <h3 > Title : {{resource.title}}</h3>
+          <p class="text-white"> {{resource.description}}</p>
+          <p class="text-white" id="display-time-detail">{{resource.createdAt}}</p>
+          </div>
 
 
 
-
-        <div class="col-12">
-          <form class="row g-3 p-4" id="updateform">
+          <form class="row g-3 p-4" id="updateform" hidden>
             <div class="form-title text-white mb-4 ">
               <h4><i class="bi bi-pencil-square"></i> Edit Post </h4>
             </div>
             <div class="col-12">
               <label for="inputTitle" class="form-label text-white">Title</label>
               <input type="text" class="form-control" id="editedTitle" placeholder="{{resource.title}}"
-                value="{{Resource.title}}">
+                value="{{resource.title}}">
             </div>
             <div class="col-12">
               <label for="inputDescription" class="form-label text-white">Description</label>

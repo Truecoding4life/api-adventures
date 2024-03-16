@@ -154,6 +154,7 @@ nav a {
     background-color: rgba(15, 82, 127, 0.379);
     border-radius: 30px;
     color: white;
+    font-family: Nunito Sans;
 }
 
 .search-button:hover{
@@ -193,4 +194,10 @@ nav a {
     padding: 10px;
     font-family: Poppins;
     transition: .4s;
+}
+
+.post-detail{
+    background-color: rgba(33, 48, 81, 0.575);
+    padding: 20px;
+    border-radius: 30px;
 }
