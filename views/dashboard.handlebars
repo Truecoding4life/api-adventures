@@ -1,17 +1,8 @@
 <div class="section mt-5">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-1"></div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-5">
-                <div class="card-title text-white mb-4">
-                    <h3> <i class="bi bi-file-person"></i> Your Resources </h3>
-                </div>
-                {{#each resources as |resource|}}
-                {{> resource-details}}
-                {{/each}}
-            </div>
-            <div class="col-1"></div>
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3">
+            
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-6">
                 <div class="form-title text-white mb-4">
                         <h3><i class="bi bi-plus-circle"></i> Create Resource</h3>
                         <p id="user_id" hidden="true" class="text-white" >{{user_id}}</p>
@@ -19,20 +10,20 @@
                     <form class="row g-3 createform">
                         <div class="col-12">
                             <label for="inputTitle" class="form-label text-white">Title</label>
-                            <input type="text" class="form-control" id="inputTitle" placeholder="Enter resource title">
+                            <input type="text" class="form-control custom-input" id="inputTitle" placeholder="Enter resource title">
                         </div>
                         <div class="col-12">
                             <label for="inputDescription" class="form-label text-white">Description</label>
-                            <textarea class="form-control" id="Resource-description" rows="3"
+                            <textarea class="form-control custom-input" id="Resource-description" rows="3"
                                 placeholder="Resource Description"></textarea>
                         </div>
                         <div class="col-md-6">
                             <label for="inputTags" class="form-label text-white">Tags</label>
-                            <input type="text" class="form-control" id="inputTags" placeholder="Enter resource tag(s)">
+                            <input type="text" class="form-control custom-input" id="inputTags" placeholder="Enter resource tag(s)">
                         </div>
                         <div class="col-md-4">
                             <label for="inputCategory" class="form-label text-white">Category</label>
-                            <select id="inputCategory" class="form-select">
+                            <select id="inputCategory" class="form-select custom-input">
                                 <option selected>Select resource category</option>
                                 <option value="1" id="sports">sports</option>
                                 <option value="2" id="food">food</option>
@@ -45,11 +36,22 @@
                             </select>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Create Resource</button>
+                            <button type="submit" class="btn create-resource-button">Create Resource</button>
                         </div>
                     </form>
                 </div>
+
+
+<div class="col-12 col-sm-12 col-md-12 col-lg-6 post-container">
+                <div class="card-title text-white mb-4">
+                    <h3> <i class="bi bi-file-person"></i> Your Resources </h3>
+                </div>
+                {{#each resources as |resource|}}
+                {{> resource-details}}
+                {{/each}}
             </div>
+            </div>
+
         </div>
         <script src="/js/resource-with-image.js"></script>
     </div>

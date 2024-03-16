@@ -1,10 +1,38 @@
 
 {{#if loggedIn}}
   <div class="section">
-    <div class="container-fluid p-5">
+    <div class="container p-5">
       <div class="row">
-        {{#each categories as |category|}}  
-            {{> category}}
+        <div class="col-12 text-center">
+          <div class="form-title text-white mb-4">
+            <h3> Lets get started </h3>
+            <div class="row">
+          <div class="col-11">
+                            <select id="searchByCategory" class="form-select custom-input">
+                                <option selected>Search by category</option>
+                                <option value="1" id="sports">sports</option>
+                                <option value="2" id="food">food</option>
+                                <option value="3" id="music">music</option>
+                                <option value="4" id="weather">weather</option>
+                                <option value="5" id="events">events</option>
+                                <option value="6" id="gaming">gaming</option>
+                                <option value="7" id="technologies">technologies</option>
+                                <option value="8" id="shopping">shopping</option>
+                            </select>
+                        </div>
+                        <div class="col-1">
+                            <button type="submit" id="search-btn" class="btn search-button">search</button>
+                        </div>
+                 </div>       
+          </div>
+          </div>
+          
+        
+        <div class="col-12">
+          <h3> News Feed </h3>
+        </div>
+        {{#each resources as |resource|}}  
+            {{> homepage-resources}}
 
 
 

@@ -1,24 +1,36 @@
 const { Category } = require('../models');
 
+
+
 const categoryData = [
     {
         category_name: "sports",
+        image_url:"../image/logo/game.jpg"
     },
     {
         category_name: "foods",
+        image_url:"../image/logo/food.jpg"
+
     },
     {
         category_name: "music",
+        image_url:"../image/logo/music.jpg"
+
     },
     {
         category_name: "weather",
+        image_url:"../image/logo/weather.jpg"
+
        
     },
     {
         category_name: "events",
+        image_url:""
     },    
     {
         category_name: "gaming",
+        image_url:"../image/logo/game.jpg"
+
     },    
     {
         category_name: "technology",

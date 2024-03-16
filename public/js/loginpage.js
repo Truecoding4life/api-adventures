@@ -43,7 +43,7 @@ const password = document.querySelector('#passwordSignup').value.trim();
     }
 }
 
-const loginBox = document.querySelector('#loginBox');
+const loginBox = document.querySelector('#login');
 const signUp = document.querySelector('#signUp');
 loginBox.addEventListener('submit', loginHandler);
 signUp.addEventListener('submit', signUpHandler);

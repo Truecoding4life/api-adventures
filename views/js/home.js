@@ -48,3 +48,4 @@ newResource.addEventListener("submit", (event) => {
         }
     })
 })
+
