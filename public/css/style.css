@@ -41,10 +41,14 @@ header {
     border-radius: 20px;
 
 }
-.custom-input{
-    background-color: #1d2026;
+.custom-input {
+    background-color: #2d303473;
     border-color: #161d2a;
     border-radius: 20px;
+    color: white;
+}
+
+.custom-input::placeholder {
     color: white;
 }
 
@@ -70,44 +74,44 @@ header {
 }
 nav {
 
-    background-color: rgba(22, 28, 40, 0.896);
+    background-color: rgba(22, 31, 46, 0.767);
     
 
 }
 
 .navbar-brand {
     font-family: 'Poppins', sans-serif;
+    color:  #3f5477;
 
 }
 
 
-nav a {
-    color: white;
-    font-size: 24px;
-}
+
 
 .nav-link {
     margin-left: 40px;
-
-}
-
-.nav-item a {
-    color: rgba(230, 225, 225, 0.942);
+    color: #3f5477;
     font-size: 24px;
+
 }
 
-.nav-item a:hover {
-    color: #2ee19dda;
+
+
+.nav-link:hover {
+    color: #a1bebdda;
 }
 
 .navbar-brand:hover {
-    color: #2ee19dda;
+    color: #a1bebdda;
 }
 
 #updateform {
-    background-color: rgba(15, 14, 14, 0.917);
-    border-radius: 30px;
-    max-width: 600px;
+    background-color: rgb(19, 22, 29);
+    margin-top: 10%;
+    border-radius: 20px;
+    box-shadow: 0 0 30px 0 rgba(18, 17, 17, 0.68);
+
+   
 }
 
 
@@ -201,3 +205,8 @@ nav a {
     padding: 20px;
     border-radius: 30px;
 }
+.edit-button{
+    color: rgb(78, 228, 163);
+    width: 10;
+}
+

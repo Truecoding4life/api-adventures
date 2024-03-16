@@ -17,5 +17,5 @@ const date = dateDisplay.text().slice(0,16);
 const time = dateDisplay.text().slice(17,26)
 console.log(time)
 
-dateDisplay.html(`Posted: ${date}` )
+dateDisplay.html(` ${date}` )
 timeDisplay.html(time)
