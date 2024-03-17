@@ -1,7 +1,7 @@
 <div class="section mt-5 animate__animated animate__fadeIn">
   <div class="container">
     <div class="row login-box">
-      <div id="liveAlertPlaceholder"></div>
+        <div class="col-12" id="liveAlertPlaceholder"></div>
 
       <div class="col-12 col-lg-6" id="login">
         <form class="p-4">
@@ -13,7 +13,12 @@
           </div>
           <div class="mb-3">
             <label class="form-label text-white">Password</label>
-            <input type="password" placeholder="****************" class="form-control custom-input" id="password">
+            <input
+              type="password"
+              placeholder="****************"
+              class="form-control custom-input"
+              id="password"
+            />
           </div>
           <button type="submit" class="btn col-12 login-button">Login</button>
         </form>
@@ -24,18 +29,23 @@
             <div class="mb-3">
               <h3><i class="bi bi-plus-circle"></i> Sign Up  </h3>
 
-              {{!-- username --}}
+              {{! username }}
               <label for="username" class="form-label" required>Username</label>
-              <input type="text" class="form-control custom-input" aria-describedby="inputGroup-sizing-sm" id="username"
-                placeholder="Username">
+              <input
+                type="text"
+                class="form-control custom-input"
+                aria-describedby="inputGroup-sizing-sm"
+                id="username"
+                placeholder="Username"
+              />
             </div>
-            {{!-- email --}}
+            {{! email }}
             <div class="mb-3">
               <label for="userEmail" class="form-label" required>Email address</label>
               <input type="email" id="emailSignup" class="form-control custom-input" placeholder="Enter a valid email"
                 aria-describedby="emailHelp">
             </div>
-            {{!-- password --}}
+            {{! password }}
             <div class="mb-3">
               <label for="password" class="form-label" required>Password</label>
               <input type="password" id="passwordSignup" class="form-control custom-input" placeholder="************">
