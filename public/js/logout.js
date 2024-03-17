@@ -6,3 +6,4 @@ this.session.destroy(() => {
 };
 
 document.querySelector('#logout').addEventListener('click', logout);
+

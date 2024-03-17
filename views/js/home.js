@@ -49,3 +49,8 @@ newResource.addEventListener("submit", (event) => {
     })
 })
 
+function fixTimestamp(){
+    const timestamps = document.querySelectorAll('.timestamp');
+    console.log(timestamps)
+}
+fixTimestamp()
