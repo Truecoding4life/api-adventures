@@ -18,9 +18,7 @@ Category.init(
     image_url: {
       type: DataTypes.STRING,
       allowNull: true,
-      validate: {
-        isUrl: true,
-      },
+    
     }
   },
   {

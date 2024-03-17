@@ -1,6 +1,8 @@
 const { User } = require('../models');
+const bcrypt = require("bcrypt");
 
-const userData = [
+
+let userData = [
 {
     username: "andy",
     email: "andy@google.com",  
@@ -32,7 +34,15 @@ const userData = [
   password: "password"
 },
 ];
-
-const seedUser = () => User.bulkCreate(userData);
+const seedUser = async () => {
+  const hashedUserData = await Promise.all(userData.map(async (data) => {
+    const hashedPassword = await bcrypt.hash(data.password, 10);
+    return {
+      ...data,
+      password: hashedPassword
+    };
+  }));
+  return User.bulkCreate(hashedUserData);
+};
 
 module.exports = seedUser;
