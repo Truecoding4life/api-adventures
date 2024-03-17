@@ -4,7 +4,7 @@ const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
 const appendDangerAlert = (message) => {
     const wrapper = document.createElement('div');
     wrapper.innerHTML = `
-        <div class="alert alert-danger alert-dismissible login-alert-danger" role="alert">
+        <div class="alert alert-danger alert-dismissible login-alert-danger animate__animated animate__fadeInDown" role="alert">
             <div class="d-flex align-item-center">
                 <i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-exclamation-circle-fill" viewBox="0 0 16 16">
                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
@@ -27,7 +27,7 @@ const appendDangerAlert = (message) => {
 const appendSuccessAlert = (message) => {
     const wrapper = document.createElement('div');
     wrapper.innerHTML = `
-        <div class="alert alert-success alert-dismissible login-alert-success" role="alert">
+        <div class="alert alert-success alert-dismissible login-alert-success animate__animated animate__fadeInDown" role="alert">
             <div class="d-flex align-item-center">
                <div class="spinner-border  " role="status">
               </div>
