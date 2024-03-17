@@ -18,6 +18,25 @@ body {
 }
 
 
+.login-alert-success{
+    background-color: #42a381b4;
+    color: white;
+    border-radius: 20px;
+    border-color: black;
+    
+
+}
+
+.login-alert-danger{
+    background-color: #c24141c9;
+    color: white;
+    border-radius: 20px;
+    border-color: black;
+
+
+
+}
+
 header {
     background-color: rgb(61, 140, 96);
     padding: 50px;
@@ -49,7 +68,9 @@ header {
     color: white;
 }
 
-
+.custom-input::placeholder {
+    color: rgba(137, 136, 145, 0.718);
+}
 
 .custom-input:focus {
     color: white;
@@ -87,7 +108,10 @@ nav {
 
 
 
+.need-space-icon{
+    margin-right: 10px;
 
+}
 
 
 .nav-link {
