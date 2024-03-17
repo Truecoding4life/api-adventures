@@ -88,9 +88,34 @@ nav {
 
 
 
+.spinner-border{
+    margin-right: 10px;
+}
+
+.alert{
+    color: rgb(15, 14, 14);
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Poppins;
+    border-color: rgb(15, 14, 14);
+}
+
+.alert-secondary{
+    background-color: rgba(49, 200, 122, 0.771);
+}
+
+.alert-danger{
+    background-color: rgba(249, 115, 115, 0.767);
+}
 
 
+.danger-icon{
+    color: #ff0000;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 300px;
 
+}
 
 .nav-link {
     margin-left: 40px;
@@ -210,8 +235,13 @@ nav {
     border-radius: 30px;
 }
 .edit-button{
-    color: rgb(78, 228, 163);
+    color: rgba(69, 220, 155, 0.753);
     width: 10;
+}
+
+.edit-button:hover{
+    color: rgb(60, 252, 140);
+    transition: .4s;
 }
 
 
