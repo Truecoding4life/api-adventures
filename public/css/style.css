@@ -49,14 +49,12 @@ header {
     color: white;
 }
 
-.custom-input::placeholder {
-    color: white;
-}
+
 
 .custom-input:focus {
     color: white;
     background-color: #070d17;
-    border-color: rgb(199, 92, 46);
+    border-color: rgb(42, 40, 40);
     
 }
 
