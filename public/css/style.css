@@ -18,6 +18,25 @@ body {
 }
 
 
+.login-alert-success{
+    background-color: #2abc89aa;
+    color: rgb(252, 244, 244);
+    border-radius: 20px;
+    border-color: black;
+    
+
+}
+
+.login-alert-danger{
+    background-color: #c24141c9;
+    color: white;
+    border-radius: 20px;
+    border-color: black;
+
+
+
+}
+
 header {
     background-color: rgb(61, 140, 96);
     padding: 50px;
@@ -50,13 +69,13 @@ header {
 }
 
 .custom-input::placeholder {
-    color: white;
+    color: rgba(137, 136, 145, 0.718);
 }
 
 .custom-input:focus {
     color: white;
     background-color: #070d17;
-    border-color: rgb(199, 92, 46);
+    border-color: rgb(42, 40, 40);
     
 }
 
@@ -87,6 +106,9 @@ nav {
 }
 
 
+#navbrand:hover{
+    color: #a1bebdda;
+}
 
 .spinner-border{
     margin-right: 10px;
@@ -244,6 +266,16 @@ nav {
     transition: .4s;
 }
 
+.edit-button:hover{
+    color: rgb(60, 252, 140);
+    transition: .4s;
+}
+
+.narbar-toggler-icon{
+    color: white;
+    background-color: white;
+
+}
 
 
 @media screen and (max-width: 600px) {
@@ -255,7 +287,14 @@ nav {
     }
 
     #navbrand{
-        font-size: 20px;
+        font-size: 40px;
     }
     
+}
+
+@media screen and (min-width:1200px) {
+    .post-dashboard:hover{
+        transform: scale(1.03);
+        transition: .4s;
+    }
 }
