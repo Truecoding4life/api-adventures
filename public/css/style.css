@@ -18,6 +18,25 @@ body {
 }
 
 
+.login-alert-success{
+    background-color: #2abc89aa;
+    color: rgb(252, 244, 244);
+    border-radius: 20px;
+    border-color: black;
+    
+
+}
+
+.login-alert-danger{
+    background-color: #c24141c9;
+    color: white;
+    border-radius: 20px;
+    border-color: black;
+
+
+
+}
+
 header {
     background-color: rgb(61, 140, 96);
     padding: 50px;
@@ -50,13 +69,13 @@ header {
 }
 
 .custom-input::placeholder {
-    color: white;
+    color: rgba(137, 136, 145, 0.718);
 }
 
 .custom-input:focus {
     color: white;
     background-color: #070d17;
-    border-color: rgb(199, 92, 46);
+    border-color: rgb(42, 40, 40);
     
 }
 
@@ -87,9 +106,14 @@ nav {
 }
 
 
+#navbrand:hover{
+    color: #a1bebdda;
+}
 
+.need-space-icon{
+    margin-right: 10px;
 
-
+}
 
 
 .nav-link {
