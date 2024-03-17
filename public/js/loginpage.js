@@ -20,6 +20,7 @@ const appendDangerAlert = (message) => {
             alertPlaceholder.removeChild(alertPlaceholder.lastChild);
         }
         alertPlaceholder.appendChild(wrapper);
+        
 };
 
 
@@ -40,8 +41,11 @@ const appendSuccessAlert = (message) => {
         if(alertPlaceholder.lastChild){
 
             alertPlaceholder.removeChild(alertPlaceholder.lastChild);
-        }
-        alertPlaceholder.appendChild(wrapper);
+        }       
+         alertPlaceholder.appendChild(wrapper);
+         setTimeout( ()=> {
+            document.location.replace('/');
+        }, 3 * 1000 );
 };
 // Login and Sign up handler
 
@@ -58,9 +62,7 @@ const password = document.querySelector('#password').value.trim();
         })
         if(response.ok) {
             appendSuccessAlert('Success, Please wait while we retrieve your information');
-            setTimeout( ()=> {
-                document.location.replace('/');
-            }, 3 * 1000 );
+           
         } else {
 
             appendDangerAlert(`Can't authorize user, try login again`);
@@ -87,10 +89,9 @@ const password = document.querySelector('#passwordSignup').value.trim();
             headers: {'Content-Type': 'application/json'},
         })
         if(response.ok) {
-            alert('You are now signed up successful')
-            document.location.replace('/');
+            appendSuccessAlert("Sign up Successful. Please wait we are setting up your profile")
         } else {
-            alert('Please enter a valid email and password');
+            appendDangerAlert('Failed to sign up')
         }   
     }
 }
