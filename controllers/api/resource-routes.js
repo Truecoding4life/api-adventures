@@ -64,14 +64,28 @@ router.post("/:id", async (req, res) => {
 // resource update route, tested and working
 router.put("/:id", async (req, res) => {
   try {
+    const updateData =  {
+      user_id: req.session.user_id,
+    }
+
+    if(req.body.description){
+      updateData.description = req.body.description;
+    }
+    if(req.body.image_url){
+      updateData.image_url = req.body.image_url;
+    }
+
+    if(req.body.category_id !== 'Select'){
+      updateData.category_id = req.body.category_id
+    }
+
+    if(req.body.title){
+      updateData.title = req.body.title;
+    }
+
+
     const updatedResource = await Resource.update(
-      {
-        title: req.body.title,
-        description: req.body.description,
-        image_url: req.body.image_url,
-        user_id: req.session.user_id,
-        category_id: req.body.category_id,
-      },
+      updateData,
       {
         where: {
           id: req.params.id,

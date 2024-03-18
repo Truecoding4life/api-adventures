@@ -156,14 +156,7 @@ nav {
     color: #a1bebdda;
 }
 
-#updateform {
-    background-color: rgb(19, 22, 29);
-    margin-top: 10%;
-    border-radius: 20px;
-    box-shadow: 0 0 30px 0 rgba(18, 17, 17, 0.68);
 
-   
-}
 
 
 
@@ -257,19 +250,42 @@ nav {
     border-radius: 30px;
 }
 .edit-button{
-    color: rgba(69, 220, 155, 0.753);
-    width: 10;
+    color: rgba(145, 151, 237, 0.904);
+    font-weight: 900;
+
 }
 
 .edit-button:hover{
-    color: rgb(60, 252, 140);
+    color: #c185e4;
     transition: .4s;
 }
 
-.edit-button:hover{
-    color: rgb(60, 252, 140);
-    transition: .4s;
+
+
+
+
+#updateform {
+    background-color: rgb(11, 11, 11);
+    border-radius: 10px;
+    box-shadow: 0 0 30px 0 rgba(18, 17, 17, 0.68);
+    
 }
+
+.update-form-button{
+    background-color: rgba(22, 30, 45, 0.924);
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Poppins;
+
+}
+.update-form-button:hover{
+    background-color: rgba(248, 248, 248, 0.974);
+    color: black;
+
+}
+
+
 
 .narbar-toggler-icon{
     color: white;
