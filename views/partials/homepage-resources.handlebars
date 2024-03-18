@@ -1,18 +1,26 @@
-<div class="mb-4 post-dashboard animate__animated animate__fadeIn ">
-  <div class="row align-items-center p-4">
-    <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3 post-image-col">
-      <div class="d-flex justify-content-center">
+<div class="mb-4 post-dashboard animate__animated animate__fadeInUp card-to-listen">
+  <span class="post-id" hidden> {{id}} </span>
+  <div class="row p-4">
+    <div class="col-1 col-sm-2 col-lg-1 col-xl-1 ">
+      <div class="">
         <img src="{{image_url}}" class="post-image" alt="resource image" />
       </div>
     </div>
-    <div class="col-12 col-sm-12 col-md-8 col-lg-9 col-xl-9 homepage-post-text">
+    <div class="col-11 col-sm-10 col-lg-11 homepage-post-text d-flex flex-row justify-content-between">
       <div class="">
-        <h5 class="card-title text-white">{{title}}
-          <i class="bi bi-chat-left-quote"></i></h5>
-          <p class="card-text timestamp"> {{createdAt}}</p>
-        <p class="card-text text-white">{{description}}.</p>
-        <a href="/resource/{{id}}" class="btn post-button">View Detail</a>
+        <h5 class="card-title home-resource-title text-white">{{title}}
+          
+          </h5>
+       <p class=" timestamp"> {{createdAt}}</p>
+        
       </div>
+      <p class="more-detail-text"> <i class="bi bi-hand-index-thumb"></i> click to view detail</p>
+
     </div>
+     <div class="col-12  homepage-post-text pt-3">
+<p class="card-text text-white">{{description}}.</p>
+
+
+     </div>
   </div>
 </div>

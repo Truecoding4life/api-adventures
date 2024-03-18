@@ -32,13 +32,13 @@
       <div class="col-12">
         <h3>
           Result by category :
-          {{category}}
+          <span id="categoryIdConverter"></span>
         </h3>
       </div>
       {{#each resources as |resource|}}
         <div class="col-12">
 
-          <div class="card m-3 result-card">
+          <div class="card m-3 result-card animate__animated animate__fadeInUp">
             <div class="row align-items-center">
               <p id="time-display"> </p>
               <div class="col-12 col-sm-4 col-md-3 d-flex justify-content-center">

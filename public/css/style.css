@@ -3,7 +3,7 @@
 } */
 
 body {
-    background-color: #070d17;
+    background-color: #0c0f13;
 
   
     color: #fff;
@@ -56,32 +56,33 @@ header {
 }
 
 .login-box{
-    background-color: rgba(14, 19, 33, 0.853);
+    background-color: rgba(22, 26, 39, 0.853);
     padding: 5px;
     border-radius: 20px;
 
 }
 .custom-input {
-    background-color: #2d303473;
+    background-color: #1e2328fd;
     border-color: #161d2a;
     border-radius: 20px;
     color: white;
+    font-family: 'Nunito Sans';
 }
 
 .custom-input::placeholder {
-    color: rgba(137, 136, 145, 0.718);
+    color: rgba(106, 106, 110, 0.718);
 }
 
 .custom-input:focus {
-    color: white;
-    background-color: #070d17;
-    border-color: rgb(42, 40, 40);
+    color: rgb(213, 208, 208);
+    background-color: #090d10fa;
+    border-color: rgb(5, 5, 5);
     
 }
 
 .login-button{
     background-color: #070d17;
-    color: white;
+    color: rgb(211, 208, 208);
     border-radius: 20px;
     font-family: Poppins;
 }
@@ -99,16 +100,7 @@ nav {
 
 }
 
-#navbrand{
-    font-size: 40px;
-    font-family: 'Poppins', sans-serif;
-    color: #3f5477;
-}
 
-
-#navbrand:hover{
-    color: #a1bebdda;
-}
 
 .spinner-border{
     margin-right: 10px;
@@ -139,22 +131,39 @@ nav {
 
 }
 
+.card-body{
+    font-family: "Nunito Sans";
+}
+
+.toggler-icon{
+    color: rgb(76, 101, 137);
+    
+
+
+}
+#navbrand{
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #3f5477;
+}
+
+
+#navbrand:hover{
+    color: #7a9695da;
+    transition: .6s;
+}
+
 .nav-link {
     margin-left: 40px;
     color: #3f5477;
     font-size: 24px;
 
 }
-
-
-
 .nav-link:hover {
-    color: #a1bebdda;
+    color: #7a9695da;
+    transition: .6s;
 }
 
-.navbar-brand:hover {
-    color: #a1bebdda;
-}
 
 
 
@@ -265,14 +274,14 @@ nav {
 
 
 #updateform {
-    background-color: rgb(11, 11, 11);
+    background-color: rgb(20, 92, 192);
     border-radius: 10px;
     box-shadow: 0 0 30px 0 rgba(18, 17, 17, 0.68);
     
 }
 
 .update-form-button{
-    background-color: rgba(22, 30, 45, 0.924);
+    background-color: rgba(0, 0, 0, 0.924);
     color: white;
     border-radius: 20px;
     padding: 10px;
@@ -306,6 +315,11 @@ nav {
         font-size: 40px;
 
     }
+
+  
+
+   
+
     
 }
 
