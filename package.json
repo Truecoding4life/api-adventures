@@ -24,7 +24,8 @@
     "mysql2": "^3.6.3",
     "nodemon": "^3.0.1",
     "path": "^0.12.7",
-    "sequelize": "^6.34.0"
+    "sequelize": "^6.34.0",
+    "@popperjs/core": "^2.11.8"
   },
   "engines": {
     "node": "16.x",
