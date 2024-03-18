@@ -53,6 +53,7 @@
 .post-detail-image{
     border-radius: 20px;
     width: 150px;
+    max-height: 150px;
     height:max-content;
     box-shadow: 0px 0px 5px 0px #1e1d1d;
 }
