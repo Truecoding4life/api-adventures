@@ -58,13 +58,15 @@
 }
 
 .post-text-dashboard{
-    padding-top: 30px;
+    padding-top: 40px;
     padding: 20px;
+
+    
 }
 
 
 .post-dashboard:hover{
-    background-color: #2b2d40ca;
+    background-color: #272c53ca;
     transition: .6s;
     border-radius: 20px;
     cursor:pointer
@@ -82,6 +84,12 @@
     color: #5d85d5da;
     transition: .4s;
 }
+
+.homepage-post-text{
+    max-height: 100px;
+    overflow: hidden;
+}
+
 @media screen and (max-width: 600px){
     .post-detail-image{
         width: 60px;
@@ -98,6 +106,12 @@
     .header{
         font-size: 20px;
     }
+    .custom-input-search{
+        font-size: 10px;
+    }
+    .search-button{
+        padding: 0px;
+    }
   
 }
 
@@ -110,7 +124,7 @@
 }
 
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 780px){
     .post-image{
         width: 30px;
         height: 30px;
@@ -139,5 +153,9 @@
 
     .one-resource-title{
         font-size: 15px;
+    }
+
+    .home-resource-description{
+        font-size: 14px;
     }
 }
