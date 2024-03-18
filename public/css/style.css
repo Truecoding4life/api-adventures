@@ -211,13 +211,15 @@ nav {
     background-color: #1e2328fd;
     border-color: #161d2a;
     border-radius: 10px;
-    color: white;
+    color: rgb(148, 147, 147);
     font-family: Poppins;
 
 }
 
+
+
 .search-button{
-    background-color: rgba(76, 98, 164, 0.924);
+    background-color: rgba(83, 117, 157, 0.77);
     border-radius: 10px;
     color: white;
     font-family: Syne;
@@ -330,7 +332,7 @@ nav {
     }
 
     #navbrand{
-        font-size: 40px;
+        font-size: 23px;
 
     }
 
