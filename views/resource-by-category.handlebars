@@ -1,10 +1,9 @@
 <div class="section">
 
   <div class="container-fluid p-5">
-    <div class="row">
+    <div class="row animate__animated animate__fadeIn">
       <div class="col-12 text-center">
         <div class="form-title text-white mb-4">
-          <h3 class="header"> Lets get started </h3>
           <div class="row">
             <div class="col-8 col-sm-9 col-md-10">
               <select
@@ -35,38 +34,17 @@
       </div>
       <div class="col-12">
         <h3 class="header">
-          Result by category :
-          <span id="categoryIdConverter"></span>
+          Category :
+          <span id="categoryIdConverter"> {{id}}  </span>
         </h3>
       </div>
       {{#each resources as |resource|}}
-        <div class="col-12">
+      {{> homepage-resources}}
 
-          <div class="card m-3 post-dashboard animate__animated animate__fadeInUp">
-            <div class="row align-items-center">
-              <p id="time-display"> </p>
-              <div
-                class="col-12 col-sm-4 col-md-3 d-flex justify-content-center"
-              >
-                <img
-                  src="{{image_url}}"
-                  class="card-img-top result-card-image smaller-image"
-                />
-              </div>
-              <div class="card-body col-12 col-md-9 col-sm-8">
-                <h2 class="'card-title result-card-text">{{title}} </h2>
-
-                <h5 class="card-text result-card-text">{{createdAt}}</h5>
-                <p class="card-text result-card-text">{{description}}</p>
-
-                <a href="/resource/{{id}}" class="btn post-button">View Detail</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
       {{/each}}
 
     </div>
   </div>
+
+  <script src="/js/categoryConverter.js"></script>
 </div>

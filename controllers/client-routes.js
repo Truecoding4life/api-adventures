@@ -70,6 +70,7 @@ router.get("/category/:id", async (req, res) => {
         resources,
         loggedIn: req.session.loggedIn,
         user_id: req.session.user_id,
+        id: req.params.id,
       });
     } else {
       res.status(200).render("login");

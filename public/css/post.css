@@ -44,7 +44,7 @@
 }
 
 .header{
-    color: rgb(163, 114, 209);
+    color: rgb(190, 155, 221);
     font-family: Poppins, sans-serif;
     padding-bottom: 20px;
     font-weight: 200;
@@ -114,12 +114,16 @@
     .post-image{
         width: 30px;
         height: 30px;
-      
+  
      
     
     }
     .home-resource-title{
         font-size: 15px;
+        
+    }
+
+    .text-need-space{
         margin-left: 20px;
     }
 

@@ -217,7 +217,7 @@ nav {
 }
 
 .search-button{
-    background-color: rgba(99, 95, 100, 0.924);
+    background-color: rgba(76, 98, 164, 0.924);
     border-radius: 10px;
     color: white;
     font-family: Syne;
@@ -226,7 +226,7 @@ nav {
 }
 
 .search-button:hover{
-    background-color: rgba(135, 116, 190, 0.954);
+    background-color: rgba(73, 127, 203, 0.942);
     color: rgb(12, 12, 12);
     transition: .6s;
 }
@@ -263,7 +263,7 @@ nav {
 
 .create-resource-button:hover{
     background-color: rgba(74, 184, 131, 0.966);
-    color: white;
+    color: rgb(16, 15, 15);
     border-radius: 20px;
     padding: 10px;
     font-family: Poppins;
