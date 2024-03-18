@@ -5,11 +5,11 @@
         <h2 class="header"> Post Details</h2>
         <button
           type="button"
-          class="btn edit-button"
+            class="btn edit-button animate__animated animate__tada animate__infinite"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal{{resource.id}}"
         >
-          edit
+          Try Edit
           <i>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,13 +31,13 @@
 
       </div>
       <div class="col-12 col-sm-12 col-lg-2">
-        <figure class="text-center post-detail-image">
+        <div class="text-center post-detail-image">
           <img
             class="post-detail-image"
             src="{{resource.image_url}}"
             alt="post-detail-picture"
           />
-        </figure>
+        </div>
       </div>
 
       <div class="col-12 col-sm-12 col-lg-10">
@@ -60,7 +60,7 @@
     <div class="modal-content">
       <div class="modal-body row g-3 p-3 border-3" id="updateform">
             <div class="text-white mb-4">
-              <h4><i class="bi bi-pencil-square"></i>Edit Post </h4>
+              <h4 ><i class="bi bi-pencil-square "></i>Edit Post </h4>
             </div>
             <div class="col-12">
               <label
