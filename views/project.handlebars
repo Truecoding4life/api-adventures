@@ -1,0 +1,47 @@
+<div class="section mt-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-5">
+                <div class="card-title text-white mb-4">
+                    <h3> <i class="bi bi-file-person"></i> Your Projects </h3>
+                </div>
+                {{#each projects as |project|}}
+                {{> project-details}}
+                {{/each}}
+            </div>
+            <div class="col-1"></div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-3">
+                <div class="form-title text-white mb-4">
+                        <h3><i class="bi bi-plus-circle"></i> Create Project</h3>
+                        <p id="user_id" hidden="true" class="text-white" >{{user_id}}</p>
+                    </div>
+                    <form class="row g-3 projectform">
+                        <div class="col-12">
+                            <label for="inputTitle" class="form-label text-white">Title</label>
+                            <input type="text" class="form-control" id="projectitle" placeholder="Enter project's title">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputDescription" class="form-label text-white">Description</label>
+                            <textarea class="form-control" id="projectdescription" rows="3"
+                                placeholder="Project's Description"></textarea>
+                        </div>
+<br>
+                        <div class="col-md-6">
+                            <label for="deloyed_url" class="form-label text-white">deployed URL</label>
+                            <input type="text" class="form-control" id="deloyed_url" placeholder="Enter deloyed url here">
+                        </div>
+                         <div class="col-md-6">
+                            <label for="repo_url" class="form-label text-white">repo URL</label>
+                            <input type="text" class="form-control" id="repo_url" placeholder="Enter GitHub url here">
+                        </div>
+                        
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">Create Project</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="/js/project.js"></script>
+    </div>

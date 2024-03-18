@@ -1,0 +1,34 @@
+{
+  "name": "api-adventures",
+  "version": "1.0.0",
+  "description": "Project Requirements",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.2",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.8",
+    "mysql2": "^3.6.3",
+    "nodemon": "^3.0.1",
+    "path": "^0.12.7",
+    "sequelize": "^6.34.0",
+    "@popperjs/core": "^2.11.8"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  }
+}

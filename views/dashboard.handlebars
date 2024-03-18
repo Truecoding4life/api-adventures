@@ -1,0 +1,59 @@
+<div class="section mt-5">
+    <div class="container-fluid">
+        <div class="row animate__animated animate__fadeIn ">
+            
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-6 pt-sm-5">
+                <div class="form-title text-white mb-4">
+                        <h3 class="header"><i class="bi bi-plus-circle"></i> Create Resource</h3>
+                        <p id="user_id" hidden="true" class="text-white" >{{user_id}}</p>
+                    </div>
+                    <form class="row g-3 createform">
+                        <div class="col-12">
+                            <label for="inputTitle" class="form-label text-white">Title</label>
+                            <input type="text" class="form-control custom-input" id="inputTitle" placeholder="Enter resource title">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputDescription" class="form-label text-white">Description</label>
+                            <textarea class="form-control custom-input" id="Resource-description" rows="3"
+                                placeholder="Resource Description"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputTags" class="form-label text-white">Tags</label>
+                            <input type="text" class="form-control custom-input" id="inputTags" placeholder="Enter resource tag(s)">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="inputCategory" class="form-label text-white">Category</label>
+                            <select id="inputCategory" class="form-select custom-input">
+                                <option selected>Select resource category</option>
+                                <option value="1" id="sports">sports</option>
+                                <option value="2" id="food">food</option>
+                                <option value="3" id="music">music</option>
+                                <option value="4" id="weather">weather</option>
+                                <option value="5" id="events">events</option>
+                                <option value="6" id="gaming">gaming</option>
+                                <option value="7" id="technologies">technologies</option>
+                                <option value="8" id="shopping">shopping</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn create-resource-button">Create Resource</button>
+                        </div>
+                    </form>
+                </div>
+
+
+<div class="col-12 col-sm-12 col-md-12 col-lg-6 post-container pt-4">
+                <div class="card-title text-white mb-4">
+                    <h3 class="header"> <i class="bi bi-check-circle"> </i> Your Resources </h3>
+                </div>
+                {{#each resources as |resource|}}
+                {{> resource-details}}
+                {{/each}}
+            </div>
+            </div>
+
+        </div>
+        <script src="/js/resource-with-image.js"></script>
+                <script src="/js/timeStamp.js"></script>
+
+    </div>

@@ -1,0 +1,160 @@
+<div class="section mt-5">
+  <div class="container-fluid">
+    <div class="row align-items-center post-detail animate__animated animate__bounceIn">
+      <div class="col-12 d-flex justify-content-between">
+        <h2 class="header"> Post Details</h2>
+        <button
+          type="button"
+          class="btn edit-button"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal{{resource.id}}"
+        >
+          edit
+          <i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-gear"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"
+              />
+              <path
+                d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"
+              />
+            </svg>
+          </i>
+        </button>
+
+      </div>
+      <div class="col-4 col-sm-3 col-lg-2">
+        <figure class="text-center post-detail-image">
+          <img
+            class="post-detail-image"
+            src="{{resource.image_url}}"
+            alt="post-detail-picture"
+          />
+        </figure>
+      </div>
+
+      <div class="col-8 col-sm-9">
+        <div class="post-description">
+          <h2 class="one-resource-title"> {{resource.title}}</h2>
+          <p class="text-white timestamp">{{resource.createdAt}}</p>
+          <h2 class="one-resource-title"> Category    </h2>
+          <p id="categoryIdConverter"> {{resource.category_id}} </p>
+          <p class="text-white"> {{resource.description}}</p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+<div class="modal edit-form-modal" id="exampleModal{{resource.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body row g-3 p-3 border-3" id="updateform">
+            <div class="text-white mb-4">
+              <h4><i class="bi bi-pencil-square"></i>Edit Post </h4>
+            </div>
+            <div class="col-12">
+              <label
+                for="inputTitle"
+                class="form-label text-white"
+              >Title</label>
+              <input
+                type="text"
+                class="form-control custom-input"
+                id="editedTitle"
+                placeholder="{{resource.title}}"
+                value="{{resource.title}}"
+              />
+            </div>
+            <div class="col-12">
+              <label
+                for="inputDescription"
+                class="form-label text-white"
+              >Description</label>
+              <textarea
+                class="form-control custom-input"
+                id="editedDescription"
+                style="overflow: hidden;"
+                rows="3"
+                placeholder="{{resource.description}}"
+                value="{{resource.description}}"
+              ></textarea>
+            </div>
+            <div class="col-md-6">
+              <label for="inputTags" class="form-label text-white">Tags</label>
+              <input
+                type="text"
+                class="form-control custom-input"
+                id="inputTags"
+                placeholder="Enter resource tag(s)"
+              />
+            </div>
+            <div class="col-md-4">
+              <label
+                for="inputCategory"
+                class="form-label text-white"
+              >Category</label>
+              <select id="editedCategory" class="form-select custom-input">
+                <option selected>Select </option>
+                <option value="1" id="sports">sports</option>
+                <option value="2" id="food">food</option>
+                <option value="3" id="music">music</option>
+                <option value="4" id="weather">weather</option>
+                <option value="5" id="events">events</option>
+                <option value="6" id="gaming">gaming</option>
+                <option value="7" id="technologies">technologies</option>
+                <option value="8" id="shopping">shopping</option>
+              </select>
+            </div>
+            <div class="col-md-12">
+              <label
+                for="inputImage"
+                class="form-label text-white"
+              >Image</label>
+              <input
+                type="text"
+                class="form-control custom-input"
+                id="editedImage"
+                value="{{resource.image_url}}"
+              />
+            </div>
+
+            <div class="col-12 d-flex mt-4">
+              <button
+                type="submit"
+                class="btn update-form-button me-2 col-sm-6"
+                id="update"
+              >Update Resource</button>
+              <button
+                type="submit"
+                class="btn update-form-button col-sm-6"
+                id="delete"
+              >Delete Resource</button>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+  </div>
+
+</div>
+
+ <script src="/js/updateDelete.js"></script> 
+  <script src="/js/categoryConverter.js"></script> 
+   <script src="/js/timeStamp.js"></script> 
+
+

@@ -1,0 +1,57 @@
+body {
+    background-image: url("../image/datamove1.gif");
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+#main {
+    margin-top: 200px;
+}
+#logo {
+    font-size: 100px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: rgba(213, 213, 217, 0.632);
+}
+
+#getStart{
+    background-color: rgba(0, 0, 0, 0.889);
+    color: rgba(224, 221, 221, 0.744);
+    padding: 13px;
+    border-radius: 30px;
+    font-family: Poppins;
+    transform: scale(1.1);
+}
+
+#getStart:hover{
+    transform: scale(1.2);
+    transition: .6s;
+}
+
+.nav-link {
+    margin-left: 40px;
+    color: #3f5477;
+    font-size: 24px;
+
+}
+
+
+
+.nav-link:hover {
+    color: #a1bebdda;
+}
+
+@media screen and (max-width: 600px) {
+    #main {
+        margin-top: 140px;
+    }
+    #logo {
+        font-size: 50px;
+    }
+    #getStart {
+        padding: 10px;
+    }
+    
+}

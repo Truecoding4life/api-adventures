@@ -1,0 +1,139 @@
+.post-dashboard{
+    background-color: #1d2129ca;
+    border-radius: 20px;
+    font-family: Nunito Sans, sans-serif;
+}
+
+.post-image{
+    border-radius: 30px;
+    max-width: 80px;
+    height: 80px;
+    box-shadow: 0px 0px 5px 0px #1e1d1d;
+}
+
+.post-image-dashboard{
+    border-radius: 10px;
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.post-button{
+    color: #ebe6e6;
+    border-color: none;
+    border-radius: 20px;
+    background-color: rgba(33, 56, 68, 0.825);
+    padding: 10px;
+    font-family: Poppins, Courier, monospace;
+}
+
+.post-button:hover{
+    color: #ebe5e5;
+    background-color: #355270f4;
+    transition: .4s;
+    border-color: none;
+}
+
+.post-description{
+    color: white;
+    font-family: Nunito Sans, sans-serif;
+
+}
+
+.edit-form-modal{
+    margin-top: 10%;
+}
+
+.header{
+    color: rgb(163, 114, 209);
+    font-family: Poppins, sans-serif;
+    padding-bottom: 20px;
+    font-weight: 200;
+}
+
+.post-detail-image{
+    border-radius: 20px;
+    width: 150px;
+    height:max-content;
+    box-shadow: 0px 0px 5px 0px #1e1d1d;
+}
+
+.post-text-dashboard{
+    padding-top: 30px;
+    padding: 20px;
+}
+
+
+.post-dashboard:hover{
+    background-color: #2b2d40ca;
+    transition: .6s;
+    border-radius: 20px;
+    cursor:pointer
+
+}
+
+.more-detail-text{
+    color: #53545f;
+    font-size: 15px;
+    font-family: Poppins, Courier, monospace;
+
+}
+
+.more-detail-text:hover{
+    color: #5d85d5da;
+    transition: .4s;
+}
+@media screen and (max-width: 600px){
+    .post-detail-image{
+        width: 60px;
+    }
+    .post-image{
+        width: 100px;
+    }
+    .post-button{
+        padding: 5px;
+    }
+    .post-description{
+        font-size: 12px;
+    }
+    .header{
+        font-size: 20px;
+    }
+  
+}
+
+@media screen and (max-width: 1200px){
+    .post-detail-image{
+        width: 100px;
+    }
+   
+    
+}
+
+
+@media screen and (max-width: 750px){
+    .post-image{
+        width: 30px;
+        height: 30px;
+      
+     
+    
+    }
+    .home-resource-title{
+        font-size: 15px;
+        margin-left: 20px;
+    }
+
+    .timestamp{
+        font-size: 13px;
+    
+    }
+    .more-detail-text{
+        display: none;
+    
+    
+    }
+
+    .one-resource-title{
+        font-size: 15px;
+    }
+}
