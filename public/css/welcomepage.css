@@ -5,6 +5,31 @@ body {
     height: 100vh;
 
 }
+/* Track */
+::-webkit-scrollbar {
+    width: 10px; /* width of the scrollbar */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* color of the scrollbar handle */
+    border-radius: 5px; /* roundness of the scrollbar handle */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* color of the scrollbar handle on hover */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* color of the scrollbar track */
+  }
+  
+  /* Corner */
+  ::-webkit-scrollbar-corner {
+    background: transparent; /* color of the scrollbar corner (between vertical and horizontal scrollbar) */
+  }
 
 #main {
     margin-top: 200px;
@@ -30,6 +55,18 @@ body {
     transition: .6s;
 }
 
+.nav-link {
+    margin-left: 40px;
+    color: #3f5477;
+    font-size: 24px;
+
+}
+
+
+
+.nav-link:hover {
+    color: #a1bebdda;
+}
 
 @media screen and (max-width: 600px) {
     #main {

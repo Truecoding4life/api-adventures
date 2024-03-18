@@ -9,7 +9,7 @@
           data-bs-toggle="modal"
           data-bs-target="#exampleModal{{resource.id}}"
         >
-           edit
+          edit
           <i>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -42,11 +42,10 @@
 
       <div class="col-8 col-sm-9">
         <div class="post-description">
-          <h3> Title : {{resource.title}}</h3>
-          <p
-            class="text-white timestamp"
-            
-          >{{resource.createdAt}}</p>
+          <h2> {{resource.title}}</h2>
+          <p class="text-white timestamp">{{resource.createdAt}}</p>
+          <h4> Category    </h4>
+          <p id="categoryIdConverter"> {{resource.category_id}} </p>
           <p class="text-white"> {{resource.description}}</p>
         </div>
 
@@ -54,16 +53,12 @@
 
     </div>
 
-    <div
-      class="modal fade"
-      id="exampleModal{{resource.id}}"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-body">
-          <form class="row g-3 p-3" id="updateform">
+
+
+<div class="modal edit-form-modal" id="exampleModal{{resource.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body row g-3 p-3 border-3" id="updateform">
             <div class="text-white mb-4">
               <h4><i class="bi bi-pencil-square"></i>Edit Post </h4>
             </div>
@@ -87,7 +82,8 @@
               >Description</label>
               <textarea
                 class="form-control custom-input"
-                id="editedContent"
+                id="editedDescription"
+                style="overflow: hidden;"
                 rows="3"
                 placeholder="{{resource.description}}"
                 value="{{resource.description}}"
@@ -107,7 +103,7 @@
                 for="inputCategory"
                 class="form-label text-white"
               >Category</label>
-              <select id="inputCategory" class="form-select custom-input">
+              <select id="editedCategory" class="form-select custom-input">
                 <option selected>Select </option>
                 <option value="1" id="sports">sports</option>
                 <option value="2" id="food">food</option>
@@ -127,7 +123,7 @@
               <input
                 type="text"
                 class="form-control custom-input"
-                id="inputImage"
+                id="editedImage"
                 value="{{resource.image_url}}"
               />
             </div>
@@ -135,23 +131,30 @@
             <div class="col-12 d-flex mt-4">
               <button
                 type="submit"
-                class="btn search-button me-2 col-sm-6"
+                class="btn update-form-button me-2 col-sm-6"
                 id="update"
               >Update Resource</button>
               <button
                 type="submit"
-                class="btn search-button col-sm-6"
+                class="btn update-form-button col-sm-6"
                 id="delete"
-                data-bs-dismiss="modal"
               >Delete Resource</button>
             </div>
-          </form>
+          </div>
         </div>
-      </div>
+      
     </div>
+  </div>
+</div>
+
+
 
   </div>
 
 </div>
 
-<script src="/js/updateDelete.js"></script>
+ <script src="/js/updateDelete.js"></script> 
+  <script src="/js/categoryConverter.js"></script> 
+   <script src="/js/timeStamp.js"></script> 
+
+

@@ -5,8 +5,9 @@ document.querySelector("#update").addEventListener("click", (event) => {
   event.preventDefault();
   const editResource = {
     title: document.querySelector("#editedTitle").value,
-    description: document.querySelector("#editedContent").value,
-    category_id: document.querySelector("#inputCategory").value,
+    description: document.querySelector("#editedDescription").value,
+    category_id: document.querySelector("#editedCategory").value,
+    image_url: document.querySelector('#editedImage').value,
   };
   // console.log(postId);
   console.log(editResource);
@@ -19,7 +20,7 @@ document.querySelector("#update").addEventListener("click", (event) => {
   }).then((res) => {
     if (res.ok) {
       console.log("Resource updated");
-      location.href = "/dashboard"; //verify path
+      location.href = `/resource/${resourceId}`
     } else {
       alert("please try again");
     }
