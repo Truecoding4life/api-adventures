@@ -149,7 +149,7 @@ nav {
 
 
 #navbrand:hover{
-    color: #7a9695da;
+    color: #bd83d0da;
     transition: .6s;
 }
 
@@ -160,7 +160,7 @@ nav {
 
 }
 .nav-link:hover {
-    color: #7a9695da;
+    color:#bd83d0da;
     transition: .6s;
 }
 
@@ -219,16 +219,16 @@ nav {
 
 
 .search-button{
-    background-color: rgba(83, 117, 157, 0.77);
+    background-color: rgba(34, 44, 54, 0.77);
     border-radius: 10px;
-    color: white;
+    color: #bd83d0da;
     font-family: Syne;
     font-weight: 300;
     width: 100%;
 }
 
 .search-button:hover{
-    background-color: rgba(73, 127, 203, 0.942);
+    background-color: rgba(164, 111, 177, 0.942);
     color: rgb(12, 12, 12);
     transition: .6s;
 }
@@ -256,9 +256,9 @@ nav {
 }
 
 .create-resource-button{
-    background-color: rgba(32, 178, 117, 0.656);
+    background-color: rgba(60, 108, 86, 0.926);
     color: white;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 10px;
     font-family: Poppins;
 }
@@ -266,9 +266,6 @@ nav {
 .create-resource-button:hover{
     background-color: rgba(74, 184, 131, 0.966);
     color: rgb(16, 15, 15);
-    border-radius: 20px;
-    padding: 10px;
-    font-family: Poppins;
     transition: .4s;
 }
 
@@ -278,13 +275,13 @@ nav {
     border-radius: 30px;
 }
 .edit-button{
-    color: rgba(161, 150, 116, 0.904);
+    color: rgba(188, 143, 188, 0.904);
     font-weight: 700;
 
 }
 
 .edit-button:hover{
-    color: #b499e3;
+    color: #ad99cf;
     transition: .4s;
 }
 
