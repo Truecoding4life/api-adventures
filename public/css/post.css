@@ -1,21 +1,20 @@
 .post-dashboard{
-    background-color: rgba(30, 33, 45, 0.95);
+    background-color: #1d2129ca;
     border-radius: 20px;
     font-family: Nunito Sans, sans-serif;
 }
 
 .post-image{
-    border-radius: 300px;
-    max-width: 200px;
-    height: 200px;
+    border-radius: 30px;
+    max-width: 80px;
+    height: 80px;
     box-shadow: 0px 0px 5px 0px #1e1d1d;
 }
 
 .post-image-dashboard{
-    border-radius: 300px;
+    border-radius: 10px;
     max-width: 50px;
-    height: 50px;
-    box-shadow: 0px 0px 5px 0px #1e1d1d;
+    max-height: 50px;
 }
 
 .post-button{
@@ -45,14 +44,16 @@
 }
 
 .header{
-    color: white;
+    color: rgb(190, 155, 221);
     font-family: Poppins, sans-serif;
     padding-bottom: 20px;
+    font-weight: 200;
 }
 
 .post-detail-image{
-    border-radius: 200px;
-    width: 170px;
+    border-radius: 20px;
+    width: 150px;
+    height:max-content;
     box-shadow: 0px 0px 5px 0px #1e1d1d;
 }
 
@@ -61,6 +62,26 @@
     padding: 20px;
 }
 
+
+.post-dashboard:hover{
+    background-color: #2b2d40ca;
+    transition: .6s;
+    border-radius: 20px;
+    cursor:pointer
+
+}
+
+.more-detail-text{
+    color: #53545f;
+    font-size: 15px;
+    font-family: Poppins, Courier, monospace;
+
+}
+
+.more-detail-text:hover{
+    color: #5d85d5da;
+    transition: .4s;
+}
 @media screen and (max-width: 600px){
     .post-detail-image{
         width: 60px;
@@ -89,15 +110,34 @@
 }
 
 
-@media screen and (max-width: 760px){
+@media screen and (max-width: 750px){
     .post-image{
-        width: 100px;
-        height: 100px;
+        width: 30px;
+        height: 30px;
+  
      
     
     }
-    .homepage-post-text{
-        padding-top: 40px;
+    .home-resource-title{
+        font-size: 15px;
+        
     }
+
+    .text-need-space{
+        margin-left: 20px;
+    }
+
+    .timestamp{
+        font-size: 13px;
     
+    }
+    .more-detail-text{
+        display: none;
+    
+    
+    }
+
+    .one-resource-title{
+        font-size: 15px;
+    }
 }

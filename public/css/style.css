@@ -3,7 +3,7 @@
 } */
 
 body {
-    background-color: #070d17;
+    background-color: #0c0f13;
 
   
     color: #fff;
@@ -56,32 +56,33 @@ header {
 }
 
 .login-box{
-    background-color: rgba(14, 19, 33, 0.853);
+    background-color: rgba(22, 26, 39, 0.853);
     padding: 5px;
     border-radius: 20px;
 
 }
 .custom-input {
-    background-color: #2d303473;
+    background-color: #1e2328fd;
     border-color: #161d2a;
     border-radius: 20px;
     color: white;
+    font-family: 'Nunito Sans';
 }
 
 .custom-input::placeholder {
-    color: rgba(137, 136, 145, 0.718);
+    color: rgba(106, 106, 110, 0.718);
 }
 
 .custom-input:focus {
-    color: white;
-    background-color: #070d17;
-    border-color: rgb(42, 40, 40);
+    color: rgb(213, 208, 208);
+    background-color: #090d10fa;
+    border-color: rgb(5, 5, 5);
     
 }
 
 .login-button{
     background-color: #070d17;
-    color: white;
+    color: rgb(211, 208, 208);
     border-radius: 20px;
     font-family: Poppins;
 }
@@ -99,16 +100,7 @@ nav {
 
 }
 
-#navbrand{
-    font-size: 40px;
-    font-family: 'Poppins', sans-serif;
-    color: #3f5477;
-}
 
-
-#navbrand:hover{
-    color: #a1bebdda;
-}
 
 .spinner-border{
     margin-right: 10px;
@@ -139,22 +131,39 @@ nav {
 
 }
 
+.card-body{
+    font-family: "Nunito Sans";
+}
+
+.toggler-icon{
+    color: rgb(76, 101, 137);
+    
+
+
+}
+#navbrand{
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #3f5477;
+}
+
+
+#navbrand:hover{
+    color: #7a9695da;
+    transition: .6s;
+}
+
 .nav-link {
     margin-left: 40px;
     color: #3f5477;
     font-size: 24px;
 
 }
-
-
-
 .nav-link:hover {
-    color: #a1bebdda;
+    color: #7a9695da;
+    transition: .6s;
 }
 
-.navbar-brand:hover {
-    color: #a1bebdda;
-}
 
 
 
@@ -198,17 +207,27 @@ nav {
    
 }
 
-.search-button{
-    background-color: rgba(15, 82, 127, 0.379);
-    border-radius: 30px;
+.custom-input-search{
+    background-color: #1e2328fd;
+    border-color: #161d2a;
+    border-radius: 10px;
     color: white;
-    font-family: Nunito Sans;
+    font-family: Poppins;
+
+}
+
+.search-button{
+    background-color: rgba(76, 98, 164, 0.924);
+    border-radius: 10px;
+    color: white;
+    font-family: Syne;
+    font-weight: 300;
+    width: 100%;
 }
 
 .search-button:hover{
-    background-color: rgba(15, 122, 193, 0.596);
-    border-radius: 30px;
-    color: white;
+    background-color: rgba(73, 127, 203, 0.942);
+    color: rgb(12, 12, 12);
     transition: .6s;
 }
 
@@ -216,6 +235,13 @@ nav {
     width: 180px;
     border-radius: 200px;
     padding: 20px;
+}
+
+.result-card-text{
+    padding: 20px;
+    font-family: Poppins;
+    color: rgb(232, 226, 226);
+
 }
 
 .result-card{
@@ -237,7 +263,7 @@ nav {
 
 .create-resource-button:hover{
     background-color: rgba(74, 184, 131, 0.966);
-    color: white;
+    color: rgb(16, 15, 15);
     border-radius: 20px;
     padding: 10px;
     font-family: Poppins;
@@ -245,18 +271,18 @@ nav {
 }
 
 .post-detail{
-    background-color: rgba(33, 48, 81, 0.575);
+    background-color: #1d2129ca;
     padding: 20px;
     border-radius: 30px;
 }
 .edit-button{
-    color: rgba(145, 151, 237, 0.904);
-    font-weight: 900;
+    color: rgba(161, 150, 116, 0.904);
+    font-weight: 700;
 
 }
 
 .edit-button:hover{
-    color: #c185e4;
+    color: #b499e3;
     transition: .4s;
 }
 
@@ -265,14 +291,15 @@ nav {
 
 
 #updateform {
-    background-color: rgb(11, 11, 11);
-    border-radius: 10px;
+
+    background-color: rgb(19, 21, 25);
+    border-radius: 15px;
     box-shadow: 0 0 30px 0 rgba(18, 17, 17, 0.68);
     
 }
 
 .update-form-button{
-    background-color: rgba(22, 30, 45, 0.924);
+    background-color: rgba(48, 49, 69, 0.924);
     color: white;
     border-radius: 20px;
     padding: 10px;
@@ -280,8 +307,8 @@ nav {
 
 }
 .update-form-button:hover{
-    background-color: rgba(248, 248, 248, 0.974);
-    color: black;
+    background-color: rgba(7, 7, 7, 0.974);
+    color: rgb(213, 210, 210);
 
 }
 
@@ -306,6 +333,11 @@ nav {
         font-size: 40px;
 
     }
+
+  
+
+   
+
     
 }
 

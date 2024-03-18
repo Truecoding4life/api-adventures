@@ -19,21 +19,6 @@ const form = document.querySelector("createform")
 
 
 
-
-// function hideCreateNew() {
-//     createNew.hidden=true;
-// }
-
-// hideCreateNew();
-
-// newComment.addEventListener("submit",(event)=>{
-//     event.preventDefault()
-//     console.log('click')
-//     existingProjects.hidden=true;
-//     newProject.hidden =false;
-//     createNew.hidden =false;
-// });
-
 newProject.addEventListener("submit", (event) => {
     var title = document.querySelector("#title").value;
     var description = document.querySelector("#description").value
@@ -70,3 +55,4 @@ newProject.addEventListener("submit", (event) => {
         }
     })
 })
+

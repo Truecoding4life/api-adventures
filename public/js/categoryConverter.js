@@ -1,5 +1,6 @@
 const category = document.getElementById("categoryIdConverter");
 
+
 function displayCategory(){
   if (category) {
     let text = category.innerHTML;
